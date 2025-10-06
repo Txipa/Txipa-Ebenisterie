@@ -69,13 +69,6 @@
       opacity: 0.9;
     }
 
-    /* Clonage automatique pour boucle infinie */
-    .galerie-container::after {
-      content: '';
-      display: inline-block;
-      width: 0; /* Pas besoin de largeur spécifique, juste pour continuer l’animation */
-    }
-
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -98,6 +91,7 @@
       text-decoration: underline;
     }
 
+    /* Lightbox */
     .lightbox {
       position: fixed;
       top: 0;
@@ -106,17 +100,28 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.9);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       visibility: hidden;
       opacity: 0;
       transition: opacity 0.3s;
+      text-align: center;
+      padding: 20px;
     }
 
     .lightbox img {
       max-width: 90%;
-      max-height: 90%;
+      max-height: 80%;
       border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lightbox p {
+      max-width: 80%;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #f0ede8;
     }
 
     .lightbox.visible {
@@ -140,15 +145,14 @@
 
   <section class="galerie-horizontale">
     <div class="galerie-container">
-      <img src="images/20250827_1449_Copeau Tombant_remix_01k3ns20n2estsxkz4v1ejcpce.png" alt="Logo">
-      <img src="images/20250424_185044.jpg" alt="Echiquier et planche à découper">
-      <img src="images/20250603_123045.jpg" alt="Piste de dés">
-      <img src="images/20250404_172807.jpg" alt="Echiquier">
-      <img src="images/20250317_124347.jpg" alt="Stand pour vinyles">
-      <img src="images/IMG-20250606-WA0006.jpeg" alt="Guéridon de jeu fermé">
-      <img src="images/IMG-20250606-WA0004.jpeg" alt="Guéridon de jeu ouvert">
-      <img src="images/IMG-20250414-WA0029.jpeg" alt="Planche à découper">
-      <!-- On clone automatiquement le contenu dans le CSS pour boucle infinie -->
+      <img src="images/20250827_1449_Copeau Tombant_remix_01k3ns20n2estsxkz4v1ejcpce.png" alt="Logo" data-description="Logo de Txipa Ébénisterie, inspiré du copeau de bois.">
+      <img src="images/20250424_185044.jpg" alt="Echiquier et planche à découper" data-description="Échiquier en noyer et érable accompagné d'une planche à découper assortie.">
+      <img src="images/20250603_123045.jpg" alt="Piste de dés" data-description="Piste de dés en bois massif, réalisée sur mesure.">
+      <img src="images/20250404_172807.jpg" alt="Echiquier" data-description="Échiquier artisanal en chêne et frêne, finition huilée.">
+      <img src="images/20250317_124347.jpg" alt="Stand pour vinyles" data-description="Support pour vinyles en hêtre, au design minimaliste.">
+      <img src="images/IMG-20250606-WA0006.jpeg" alt="Guéridon de jeu fermé" data-description="Guéridon de jeu fermé, en chêne massif, avec rangement intégré.">
+      <img src="images/IMG-20250606-WA0004.jpeg" alt="Guéridon de jeu ouvert" data-description="Guéridon de jeu ouvert, plateau pivotant dévoilant l’espace de rangement.">
+      <img src="images/IMG-20250414-WA0029.jpeg" alt="Planche à découper" data-description="Planche à découper en hêtre, réalisée avec assemblages traditionnels.">
     </div>
   </section>
 
@@ -161,16 +165,19 @@
 
   <div class="lightbox" id="lightbox">
     <img src="" alt="image agrandie">
+    <p id="lightbox-description"></p>
   </div>
 
   <script>
     const images = document.querySelectorAll('.galerie-container img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
+    const lightboxDesc = document.getElementById('lightbox-description');
 
     images.forEach(img => {
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
+        lightboxDesc.textContent = img.dataset.description || '';
         lightbox.classList.add('visible');
       });
     });
