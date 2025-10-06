@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Txipa Ébénisterie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat Alternates', sans-serif;
+      background-color: #0e2b26;
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header img {
+      width: 160px;
+      opacity: 0.85;
+      filter: brightness(0.9);
+    }
+
+    header h1 {
+      margin-top: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    section.presentation {
+      max-width: 700px;
+      text-align: center;
+      padding: 40px 20px;
+      line-height: 1.6;
+      font-weight: 300;
+      color: #f0ede8;
+    }
+
+    /* Galerie défilante fluide */
+    section.galerie-horizontale {
+      width: 100%;
+      overflow: hidden;
+      padding: 40px 0;
+      background-color: #0e2b26;
+    }
+
+    .galerie-container {
+      display: flex;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+
+    .galerie-container img {
+      height: 280px;
+      border-radius: 8px;
+      margin-right: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .galerie-container img:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    /* Clonage automatique pour boucle infinie */
+    .galerie-container::after {
+      content: '';
+      display: inline-block;
+      width: 0; /* Pas besoin de largeur spécifique, juste pour continuer l’animation */
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+
+    footer a {
+      color: #f5f5f5;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="file_000000005184622fa6f049d633c3f97e.png" alt="Logo Txipa Ébénisterie" />
+    <h1>Txipa Ébénisterie</h1>
+  </header>
+
+  <section class="presentation">
+    <p>Txipa Ebénisterie est un jeune atelier de menuiserie, ébénisterie et agencement spécialisé dans la création de projets sur mesure.</p>
+    <p>Nous concevons et réalisons des meubles, aménagements et agencements uniques, pensés pour répondre précisément aux besoins et aux envies de chaque client.</p>
+    <p>Du dessin à la pose, chaque détail est travaillé avec soin, dans le respect des matériaux et du savoir-faire artisanal.</p>
+    <p>Notre objectif : donner forme à des espaces fonctionnels, durables et esthétiques, où le bois trouve naturellement sa place.</p>
+  </section>
+
+  <section class="galerie-horizontale">
+    <div class="galerie-container">
+      <img src="images/20250827_1449_Copeau Tombant_remix_01k3ns20n2estsxkz4v1ejcpce.png" alt="Logo">
+      <img src="images/20250424_185044.jpg" alt="Echiquier et planche à découper">
+      <img src="images/20250603_123045.jpg" alt="Piste de dés">
+      <img src="images/20250404_172807.jpg" alt="Echiquier">
+      <img src="images/20250317_124347.jpg" alt="Stand pour vinyles">
+      <img src="images/IMG-20250606-WA0006.jpeg" alt="Guéridon de jeu fermé">
+      <img src="images/IMG-20250606-WA0004.jpeg" alt="Guéridon de jeu ouvert">
+      <img src="images/IMG-20250414-WA0029.jpeg" alt="Planche à découper">
+      <!-- On clone automatiquement le contenu dans le CSS pour boucle infinie -->
+    </div>
+  </section>
+
+  <footer>
+    <p>Txipa /ˈtʃipa/, n. m. (eusk.) - Copeau, éclat de bois.</p>
+    <p>txipa.ebenisterie@gmail.com</p>
+    <p>Made in Romainville</p>
+    <p><a href="https://www.instagram.com/txipa_ebenisterie/" target="_blank">Instagram</a></p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="image agrandie">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.galerie-container img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('visible');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('visible');
+    });
+
+    // Clonage automatique du contenu pour boucle infinie
+    const galerie = document.querySelector('.galerie-container');
+    galerie.innerHTML += galerie.innerHTML;
+  </script>
+</body>
+</html>
