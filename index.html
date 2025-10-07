@@ -6,8 +6,8 @@
   <title>Txipa Ébénisterie</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
@@ -144,11 +144,11 @@
   </header>
 
   <section class="presentation">
-  <p><strong>Txipa Ebénisterie</strong> est un jeune atelier de menuiserie, d’ébénisterie et d’agencement spécialisé dans la création de projets sur mesure.</p> 
-  <p>Nous concevons et réalisons des meubles, aménagements et agencements uniques, pensés pour répondre précisément aux besoins et aux envies de chaque client.</p> 
-  <p>Parce que nous sommes un atelier à taille humaine, chaque projet se construit dans un véritable dialogue. Nous accompagnons nos clients à chaque étape, du dessin à la pose, pour donner vie à des créations qui leur ressemblent.</p> 
-  <p>Attachés à une démarche responsable, nous privilégions les bois locaux et les essences provenant de filières bien sourcées, respectueuses de l’environnement et du travail des forestiers.</p> 
-  <p>Chaque détail est travaillé avec soin, dans le respect des matériaux et du savoir-faire artisanal. Notre objectif : donner forme à des espaces fonctionnels, durables et esthétiques, où le bois trouve naturellement sa place.</p>
+    <p><strong>Txipa Ebénisterie</strong> est un jeune atelier de menuiserie, d’ébénisterie et d’agencement spécialisé dans la création de projets sur mesure.</p> 
+    <p>Nous concevons et réalisons des meubles, aménagements et agencements uniques, pensés pour répondre précisément aux besoins et aux envies de chaque client.</p> 
+    <p>Parce que nous sommes un atelier à taille humaine, chaque projet se construit dans un véritable dialogue. Nous accompagnons nos clients à chaque étape, du dessin à la pose, pour donner vie à des créations qui leur ressemblent.</p> 
+    <p>Attachés à une démarche responsable, nous privilégions les bois locaux et les essences provenant de filières bien sourcées, respectueuses de l’environnement et du travail des forestiers.</p> 
+    <p>Chaque détail est travaillé avec soin, dans le respect des matériaux et du savoir-faire artisanal. Notre objectif : donner forme à des espaces fonctionnels, durables et esthétiques, où le bois trouve naturellement sa place.</p>
   </section>
 
   <section class="galerie-horizontale">
@@ -196,13 +196,19 @@
       }
     });
 
-    // Fermer la lightbox en cliquant dessus ou en appuyant sur Échap
+    // Fermer la lightbox en cliquant dessus
     lightbox.addEventListener('click', () => {
       lightbox.classList.remove('visible');
       galerie.style.animationPlayState = 'running';
     });
 
+    // Fermer avec la touche Échap
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
         lightbox.classList.remove('visible');
-        galerie.style.animationPlayState = '
+        galerie.style.animationPlayState = 'running';
+      }
+    });
+  </script>
+</body>
+</html>
