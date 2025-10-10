@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://txipa-ebenisterie.com/sitemap.xml
