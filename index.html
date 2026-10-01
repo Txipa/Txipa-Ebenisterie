@@ -1,262 +1,1829 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Txipa Ébénisterie | Meubles sur mesure et agencements bois à Romainville</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Meta SEO -->
-  <meta name="description" content="Txipa Ébénisterie, atelier de menuiserie et d’agencement à Romainville. Création de meubles sur mesure, restauration et conception artisanale en bois massif, avec un savoir-faire local et durable.">
-  <meta name="keywords" content="ébénisterie, menuiserie, meubles sur mesure, agencement bois, artisan ébéniste, atelier Romainville, fabrication locale, Txipa Ébénisterie">
+  <title>Txipa Ébénisterie | Mobilier sur mesure & agencement à Romainville</title>
+
+  <meta
+    name="description"
+    content="Txipa Ébénisterie conçoit et fabrique du mobilier et des agencements sur mesure à Romainville, Paris et en Île-de-France."
+  >
   <meta name="author" content="Txipa Ébénisterie">
+  <meta name="theme-color" content="#00201E">
 
-  <!-- Open Graph (partage réseaux sociaux) -->
-  <meta property="og:title" content="Txipa Ébénisterie – création de meubles sur mesure en bois">
-  <meta property="og:description" content="Atelier d’ébénisterie et de menuiserie à Romainville. Fabrication artisanale de meubles et aménagements sur mesure, en bois local et durable.">
-  <meta property="og:image" content="https://txipa-ebenisterie.com/images/20250424_185044.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Txipa Ébénisterie – mobilier et agencement sur mesure">
+  <meta
+    property="og:description"
+    content="Conception et fabrication artisanale de mobilier et d'agencements sur mesure à Romainville."
+  >
+  <meta
+    property="og:image"
+    content="https://txipa-ebenisterie.com/images/20260926_165205.jpg"
+  >
   <meta property="og:url" content="https://txipa-ebenisterie.com">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+    /* =========================================================
+       VARIABLES
+       ========================================================= */
+
+    :root {
+      --green: #00201E;
+      --green-light: #0b302d;
+      --cream: #f1eee8;
+      --cream-soft: #d9d4cb;
+      --line: rgba(241, 238, 232, 0.16);
+
+      --max-width: 1240px;
+      --radius: 4px;
+    }
+
+    /* =========================================================
+       RESET
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: 'Montserrat Alternates', sans-serif;
-      background-color: #0e2b26;
-      color: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-
-    header img {
-      width: 160px;
-      opacity: 0.85;
-      filter: brightness(0.9);
-    }
-
-    header h1 {
-      margin-top: 10px;
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
-
-    main {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    section.presentation {
-      max-width: 700px;
-      text-align: center;
-      padding: 40px 20px;
-      line-height: 1.6;
+      background: var(--green);
+      color: var(--cream);
+      font-family: "Montserrat Alternates", sans-serif;
       font-weight: 300;
-      color: #f0ede8;
+      line-height: 1.6;
     }
 
-    section.presentation h2 {
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-
-    section.galerie-horizontale {
-      width: 100%;
+    body.no-scroll {
       overflow: hidden;
-      padding: 40px 0;
-      background-color: #0e2b26;
     }
 
-    .galerie-container {
-      display: flex;
-      width: max-content;
-      animation: scroll 80s linear infinite;
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    .galerie-container img {
-      height: 280px;
-      border-radius: 8px;
-      margin-right: 15px;
-      cursor: pointer;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .galerie-container img:hover {
-      transform: scale(1.03);
-      opacity: 0.9;
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      opacity: 0.8;
-      padding: 40px 20px;
-      line-height: 1.5;
-    }
-
-    footer a {
-      color: #f5f5f5;
+    a {
+      color: inherit;
       text-decoration: none;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    button {
+      font: inherit;
     }
+
+    /* =========================================================
+       HEADER / HERO
+       ========================================================= */
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 24px 50px;
+      position: relative;
+    }
+
+    .hero-logo {
+      width: 150px;
+      margin-bottom: 26px;
+      opacity: 0.94;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 4.5rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.1;
+    }
+
+    .hero-tagline {
+      margin: 24px 0 0;
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      letter-spacing: 0.1em;
+    }
+
+    .hero-location {
+      margin: 10px 0 0;
+      color: var(--cream-soft);
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-link {
+      position: absolute;
+      bottom: 40px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.72;
+      transition: opacity 0.25s ease;
+    }
+
+    .hero-link:hover {
+      opacity: 1;
+    }
+
+    .hero-link::after {
+      content: "↓";
+      display: block;
+      margin-top: 9px;
+      font-size: 1.1rem;
+    }
+
+    /* =========================================================
+       COMMON
+       ========================================================= */
+
+    main {
+      width: 100%;
+    }
+
+    .section {
+      width: min(calc(100% - 48px), var(--max-width));
+      margin: 0 auto;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--cream-soft);
+      font-size: 0.68rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .section-title {
+      margin: 0 0 50px;
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    /* =========================================================
+       FEATURED PROJECT
+       ========================================================= */
+
+    .featured-project {
+      border-top: 1px solid var(--line);
+    }
+
+    .featured-heading {
+      max-width: 900px;
+      margin-bottom: 45px;
+    }
+
+    .featured-heading h2 {
+      margin: 0;
+      max-width: 850px;
+      font-size: clamp(2rem, 4.5vw, 4.4rem);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .featured-description {
+      max-width: 720px;
+      margin: 28px 0 0;
+      color: var(--cream-soft);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin-top: 24px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* Photo principale */
+
+    .featured-main {
+      width: 100%;
+      height: min(72vw, 720px);
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .featured-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .featured-main:hover img {
+      transform: scale(1.015);
+    }
+
+    /* Deux photos secondaires */
+
+    .featured-secondary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .featured-secondary button {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      height: 430px;
+    }
+
+    .featured-secondary img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .featured-secondary button:hover img {
+      transform: scale(1.02);
+    }
+
+    .view-project {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(241, 238, 232, 0.55);
+      cursor: pointer;
+      background: none;
+      color: var(--cream);
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .view-project span {
+      transition: transform 0.25s ease;
+    }
+
+    .view-project:hover span {
+      transform: translateX(5px);
+    }
+
+    /* =========================================================
+       OTHER WORK
+       ========================================================= */
+
+    .works {
+      border-top: 1px solid var(--line);
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 55px 22px;
+    }
+
+    .work-card {
+      cursor: pointer;
+    }
+
+    .work-image {
+      overflow: hidden;
+      background: var(--green-light);
+      aspect-ratio: 4 / 3;
+    }
+
+    .work-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+
+    .work-card:hover .work-image img {
+      transform: scale(1.025);
+    }
+
+    .work-card h3 {
+      margin: 16px 0 4px;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .work-card p {
+      margin: 0;
+      color: var(--cream-soft);
+      font-size: 0.78rem;
+    }
+
+    /* Les photos non encore classées */
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 70px;
+    }
+
+    .archive-item {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+
+    .archive-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.88;
+      transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+    }
+
+    .archive-item:hover img {
+      opacity: 1;
+      transform: scale(1.025);
+    }
+
+    /* =========================================================
+       ABOUT
+       ========================================================= */
+
+    .about {
+      border-top: 1px solid var(--line);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.5fr;
+      gap: 80px;
+    }
+
+    .about h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .about-text {
+      max-width: 690px;
+      color: var(--cream-soft);
+      font-size: 0.96rem;
+      line-height: 1.85;
+    }
+
+    .about-text p:first-child {
+      margin-top: 0;
+    }
+
+    .about-text strong {
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+
+    .contact {
+      width: 100%;
+      padding: 120px 24px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-inner {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 4.6rem);
+      font-weight: 400;
+      line-height: 1.12;
+    }
+
+    .contact p {
+      margin: 25px auto 35px;
+      max-width: 580px;
+      color: var(--cream-soft);
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 16px 24px;
+      border: 1px solid rgba(241, 238, 232, 0.5);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
+    }
+
+    .contact-button:hover {
+      background: var(--cream);
+      color: var(--green);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      width: min(calc(100% - 48px), var(--max-width));
+      margin: auto;
+      padding: 50px 0 45px;
+      border-top: 1px solid var(--line);
+      color: var(--cream-soft);
+      font-size: 0.75rem;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+    }
+
+    .footer-definition {
+      max-width: 460px;
+    }
+
+    .footer-definition strong {
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .footer-links a {
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--cream);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      opacity: 0.7;
+    }
+
+    /* =========================================================
+       PROJECT LIGHTBOX
+       ========================================================= */
 
     .lightbox {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      inset: 0;
+      z-index: 1000;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
+      background: rgba(0, 16, 15, 0.98);
+
       opacity: 0;
-      transition: opacity 0.3s ease;
-      text-align: center;
-      padding: 20px;
-      z-index: 1000;
-    }
+      visibility: hidden;
+      pointer-events: none;
 
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    .lightbox p {
-      max-width: 80%;
-      font-size: 1rem;
-      font-weight: 300;
-      color: #f0ede8;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
     }
 
     .lightbox.visible {
+      opacity: 1;
       visibility: visible;
+      pointer-events: auto;
+    }
+
+    .lightbox-header {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lightbox-title {
+      margin: 0;
+      padding-right: 20px;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+
+    .lightbox-close {
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+      font-size: 1.7rem;
+      font-weight: 300;
+    }
+
+    .lightbox-stage {
+      position: relative;
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px 85px;
+    }
+
+    .lightbox-stage img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      user-select: none;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 55px;
+      height: 70px;
+      border: 0;
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+      font-size: 2rem;
+      opacity: 0.65;
+      transition: opacity 0.2s ease;
+    }
+
+    .lightbox-nav:hover {
       opacity: 1;
     }
+
+    .lightbox-prev {
+      left: 18px;
+    }
+
+    .lightbox-next {
+      right: 18px;
+    }
+
+    .lightbox-footer {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-top: 1px solid var(--line);
+    }
+
+    .lightbox-counter {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      opacity: 0.72;
+    }
+
+    /* =========================================================
+       SIMPLE IMAGE LIGHTBOX
+       ========================================================= */
+
+    .simple-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px;
+
+      background: rgba(0, 16, 15, 0.98);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    .simple-lightbox.visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .simple-lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .simple-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+      font-size: 1.8rem;
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+       ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        min-height: 82vh;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .featured-secondary button {
+        height: 320px;
+      }
+
+      .archive-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 650px) {
+
+      .hero {
+        min-height: 88vh;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero-logo {
+        width: 120px;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .section {
+        width: calc(100% - 30px);
+        padding: 65px 0;
+      }
+
+      .featured-main {
+        height: 110vw;
+        max-height: 600px;
+      }
+
+      .featured-secondary {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .featured-secondary button {
+        height: 105vw;
+        max-height: 520px;
+      }
+
+      .works-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .archive-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        margin-top: 55px;
+      }
+
+      .contact {
+        padding: 90px 20px;
+      }
+
+      footer {
+        width: calc(100% - 30px);
+      }
+
+      .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .lightbox-header {
+        padding: 14px 16px;
+      }
+
+      .lightbox-stage {
+        padding: 15px 10px 70px;
+      }
+
+      .lightbox-nav {
+        top: auto;
+        bottom: 5px;
+        transform: none;
+        height: 55px;
+      }
+
+      .lightbox-prev {
+        left: 25px;
+      }
+
+      .lightbox-next {
+        right: 25px;
+      }
+
+      .simple-lightbox {
+        padding: 65px 15px 25px;
+      }
+    }
+
+    /* =========================================================
+       ACCESSIBILITY
+       ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
-  <header>
-    <img src="file_000000005184622fa6f049d633c3f97e.png" alt="Logo de Txipa Ébénisterie, artisan ébéniste à Romainville" />
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
+  <header class="hero">
+
+    <!--
+      On conserve ici le même fichier de logo que dans ton site actuel.
+    -->
+    <img
+      class="hero-logo"
+      src="file_000000005184622fa6f049d633c3f97e.png"
+      alt="Logo Txipa Ébénisterie"
+    >
+
     <h1>Txipa Ébénisterie</h1>
-    <p>Création de meubles et agencements sur mesure en bois</p>
+
+    <p class="hero-tagline">
+      Ébénisterie · Menuiserie · Agencement
+    </p>
+
+    <p class="hero-location">
+      Romainville · Paris · Île-de-France
+    </p>
+
+    <a class="hero-link" href="#realisations">
+      Découvrir les réalisations
+    </a>
+
   </header>
 
+
   <main>
-    <section class="presentation">
-      <h2>Atelier d’ébénisterie artisanale à Romainville</h2>
-      <p><strong>Txipa Ébénisterie</strong> est un atelier de menuiserie, d’ébénisterie et d’agencement spécialisé dans la <strong>création de projets sur mesure</strong> en bois.</p> 
-      <p>Nous concevons et réalisons des <strong>meubles uniques</strong>, des <strong>aménagements intérieurs</strong> et des <strong>pièces</strong> pensés pour répondre précisément aux envies et aux besoins de chaque client, particulier ou professionnel.</p> 
-      <p>Atelier à taille humaine basé à <strong>Romainville (Seine-Saint-Denis)</strong>, nous privilégions le <strong>dialogue</strong> et l’accompagnement à chaque étape — du dessin à la pose — pour donner vie à des créations qui vous ressemblent.</p> 
-      <p>Engagés dans une démarche locale et responsable, nous travaillons avec des <strong>bois issus de filières durables</strong>, respectueuses de l’environnement et du savoir-faire des forestiers.</p> 
-      <p>Chaque détail est travaillé avec soin, dans le respect des matériaux et de la précision du geste, pour créer des pièces <strong>authentiques, durables et esthétiques</strong>, où le bois trouve naturellement sa place.</p>
+
+    <!-- =====================================================
+         DERNIER PROJET
+         ===================================================== -->
+
+    <section
+      class="section featured-project"
+      id="realisations"
+    >
+
+      <div class="featured-heading reveal">
+
+        <span class="eyebrow">Dernier projet</span>
+
+        <h2>
+          Meubles de salle de bain<br>
+          sur mesure en frêne massif
+        </h2>
+
+        <p class="featured-description">
+          Conception, fabrication et pose d'un ensemble de meubles
+          suspendus réalisés sur mesure en frêne massif.
+        </p>
+
+        <div class="project-meta">
+          <span>Mobilier sur mesure</span>
+          <span>Frêne massif</span>
+          <span>2026</span>
+        </div>
+
+      </div>
+
+
+      <!-- Photo principale -->
+
+      <button
+        class="featured-main reveal"
+        type="button"
+        data-project-index="0"
+        aria-label="Ouvrir la galerie du projet"
+      >
+        <img
+          src="images/20260926_165205.jpg"
+          alt="Meuble de salle de bain sur mesure en frêne massif"
+        >
+      </button>
+
+
+      <!-- Photos secondaires -->
+
+      <div class="featured-secondary">
+
+        <button
+          type="button"
+          class="reveal"
+          data-project-index="1"
+          aria-label="Voir la deuxième photo du projet"
+        >
+          <img
+            src="images/20260926_165223.jpg"
+            alt="Vue latérale d'un meuble de salle de bain en frêne massif"
+            loading="lazy"
+          >
+        </button>
+
+        <button
+          type="button"
+          class="reveal"
+          data-project-index="2"
+          aria-label="Voir la troisième photo du projet"
+        >
+          <img
+            src="images/20260927_104154.jpg"
+            alt="Meuble de salle de bain suspendu réalisé sur mesure"
+            loading="lazy"
+          >
+        </button>
+
+      </div>
+
+
+      <button
+        class="view-project"
+        id="open-project"
+        type="button"
+      >
+        Voir le projet
+        <span>→</span>
+      </button>
+
     </section>
+
+
+    <!-- =====================================================
+         AUTRES RÉALISATIONS IDENTIFIÉES
+         ===================================================== -->
+
+    <section class="section works">
+
+      <span class="eyebrow reveal">Sélection</span>
+
+      <h2 class="section-title reveal">
+        Autres réalisations
+      </h2>
+
+
+      <div class="works-grid">
+
+        <article
+          class="work-card reveal"
+          data-image="images/20250424_185044.jpg"
+        >
+          <div class="work-image">
+            <img
+              src="images/20250424_185044.jpg"
+              alt="Échiquier artisanal en bois"
+              loading="lazy"
+            >
+          </div>
+
+          <h3>Échiquier</h3>
+
+          <p>Ébénisterie · Bois massif</p>
+        </article>
+
+
+        <article
+          class="work-card reveal"
+          data-image="images/20250603_123045.jpg"
+        >
+          <div class="work-image">
+            <img
+              src="images/20250603_123045.jpg"
+              alt="Piste de dés réalisée sur mesure en bois"
+              loading="lazy"
+            >
+          </div>
+
+          <h3>Piste de dés</h3>
+
+          <p>Objet sur mesure · Bois massif</p>
+        </article>
+
+
+        <article
+          class="work-card reveal"
+          data-image="images/20250404_172807.jpg"
+        >
+          <div class="work-image">
+            <img
+              src="images/20250404_172807.jpg"
+              alt="Échiquier en chêne et frêne"
+              loading="lazy"
+            >
+          </div>
+
+          <h3>Échiquier chêne & frêne</h3>
+
+          <p>Ébénisterie · Finition huilée</p>
+        </article>
+
+
+        <article
+          class="work-card reveal"
+          data-image="images/20250317_124347.jpg"
+        >
+          <div class="work-image">
+            <img
+              src="images/20250317_124347.jpg"
+              alt="Support pour disques vinyles en hêtre massif"
+              loading="lazy"
+            >
+          </div>
+
+          <h3>Support pour vinyles</h3>
+
+          <p>Hêtre massif · Mobilier</p>
+        </article>
+
+
+        <article
+          class="work-card reveal"
+          data-image="images/IMG-20250414-WA0029.jpeg"
+        >
+          <div class="work-image">
+            <img
+              src="images/IMG-20250414-WA0029.jpeg"
+              alt="Planche à découper artisanale en bois"
+              loading="lazy"
+            >
+          </div>
+
+          <h3>Planche à découper</h3>
+
+          <p>Objet · Bois massif</p>
+        </article>
+
+      </div>
+
+
+      <!-- ===================================================
+           PHOTOS À CLASSER PLUS TARD PAR PROJET
+
+           Je n'invente volontairement aucun nom de projet ici.
+           Elles restent visibles et ouvrables.
+           =================================================== -->
+
+      <div class="archive-grid" id="archive-grid"></div>
+
+    </section>
+
+
+    <!-- =====================================================
+         L'ATELIER
+         ===================================================== -->
+
+    <section class="section about">
+
+      <div class="about-layout">
+
+        <div class="reveal">
+
+          <span class="eyebrow">L'atelier</span>
+
+          <h2>
+            Le bois,<br>
+            à votre mesure.
+          </h2>
+
+        </div>
+
+
+        <div class="about-text reveal">
+
+          <p>
+            <strong>Txipa Ébénisterie</strong> est un atelier de
+            menuiserie, d'ébénisterie et d'agencement spécialisé dans
+            la conception et la fabrication de mobilier sur mesure.
+          </p>
+
+          <p>
+            Installé à Romainville, l'atelier accompagne particuliers
+            et professionnels dans leurs projets, de la conception à
+            la pose.
+          </p>
+
+          <p>
+            Meubles, bibliothèques, dressings ou aménagements
+            intérieurs : chaque réalisation est pensée pour s'intégrer
+            naturellement à son environnement, en associant
+            fonctionnalité, esthétique et travail soigné des
+            matériaux.
+          </p>
+
+          <p>
+            Une attention particulière est portée au choix des bois,
+            à la qualité des assemblages et aux finitions, pour créer
+            des pièces faites pour durer.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+
+    <section class="contact">
+
+      <div class="contact-inner reveal">
+
+        <span class="eyebrow">Un projet ?</span>
+
+        <h2>
+          Imaginons-le ensemble.
+        </h2>
+
+        <p>
+          Mobilier sur mesure, agencement intérieur ou réalisation
+          particulière : échangeons autour de votre projet.
+        </p>
+
+        <a
+          class="contact-button"
+          href="mailto:txipa.ebenisterie@gmail.com?subject=Projet%20sur%20mesure%20-%20Txipa%20Ébénisterie"
+        >
+          Contacter l'atelier
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <section class="galerie-horizontale">
-    <h2 style="text-align:center; font-weight:400;">Quelques réalisations</h2>
-    <div class="galerie-container" id="galerie">
-      <img src="images/20250827_1449_Copeau Tombant_remix_01k3ns20n2estsxkz4v1ejcpce.png" alt="Logo Txipa Ébénisterie, inspiré du copeau de bois" data-description="Logo de Txipa Ébénisterie, inspiré du copeau de bois.">
-      <img src="images/20250424_185044.jpg" alt="Échiquier et planche à découper artisanaux en bois massif" data-description="Échiquier en noyer et érable accompagné d'une planche à découper assortie.">
-      <img src="images/20250603_123045.jpg" alt="Piste de dés en bois sur mesure" data-description="Piste de dés en bois massif, réalisée sur mesure.">
-      <img src="images/20250404_172807.jpg" alt="Échiquier en chêne et frêne huilé" data-description="Échiquier artisanal en chêne et frêne, finition huilée.">
-      <img src="images/20250317_124347.jpg" alt="Support pour vinyles en hêtre massif" data-description="Support pour vinyles en hêtre, au design minimaliste.">
-      <img src="images/IMG-20250414-WA0029.jpeg" alt="Planche à découper en hêtre réalisée à la main" data-description="Planche à découper en hêtre, réalisée avec assemblages traditionnels.">
-      <img src="images/1.png" alt="Epure">
-      <img src="images/2.png" alt="Gabarit">
-      <img src="images/3.png" alt="Chêne de pays">
-      <img src="images/4.png" alt="Bibliothèque sur mesure. CP Erable. Rubio">
-      <img src="images/6.png" alt="WIP">
-      <img src="images/7.png" alt="WIP">
-      <img src="images/8.png" alt="WIP">
-      <img src="images/9.png" alt="WIP">
-      <img src="images/10.png" alt="WIP">
-      <img src="images/11.png" alt="WIP">
-      <img src="images/12.png" alt="WIP">
-      <img src="images/13.png" alt="WIP">
-      <img src="images/14.png" alt="WIP">
-      <img src="images/15.png" alt="WIP">
-      <img src="images/16.png" alt="WIP">
-      <img src="images/17.png" alt="WIP">
-      <img src="images/18.png" alt="WIP">
-      <img src="images/19.png" alt="WIP">
-      <img src="images/20.png" alt="WIP">
-      <img src="images/21.png" alt="WIP">
-      <img src="images/22.png" alt="WIP">
-      <img src="images/24.png" alt="WIP">
-      <img src="images/25.png" alt="WIP">
 
-    </div>
-  </section>
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
 
   <footer>
-    <p><em>Txipa</em> /ˈtʃipa/, n. m. (eusk.) – Copeau, éclat de bois.</p>
-    <p><strong>Txipa Ébénisterie</strong> – Atelier artisanal de création et restauration de meubles à Romainville.</p>
-    <p><a href="mailto:txipa.ebenisterie@gmail.com">txipa.ebenisterie@gmail.com</a> · <a href="https://www.instagram.com/txipa_ebenisterie/" target="_blank">Instagram</a></p>
-    <p>Made in Romainville · SIRET : 80944761800020</p>
-    <p>V1.7.2</p>
+
+    <div class="footer-main">
+
+      <div class="footer-definition">
+
+        <strong>Txipa</strong>
+        /ˈtʃipa/, n. m. (eusk.) — Copeau, éclat de bois.
+
+        <br><br>
+
+        Txipa Ébénisterie<br>
+        Romainville · Seine-Saint-Denis
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="mailto:txipa.ebenisterie@gmail.com">
+          Email
+        </a>
+
+        <a
+          href="https://www.instagram.com/txipa_ebenisterie/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        Made in Romainville · SIRET : 80944761800020
+      </span>
+
+      <span>
+        © 2026 Txipa Ébénisterie · V2.0
+      </span>
+
+    </div>
+
   </footer>
 
-  <div class="lightbox" id="lightbox">
-    <img src="" alt="image agrandie">
-    <p id="lightbox-description"></p>
+
+  <!-- =======================================================
+       GALERIE DU PROJET SDB
+       ======================================================= -->
+
+  <div
+    class="lightbox"
+    id="project-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Galerie du projet meubles de salle de bain"
+  >
+
+    <div class="lightbox-header">
+
+      <p class="lightbox-title">
+        Meubles de salle de bain · Frêne massif
+      </p>
+
+      <button
+        class="lightbox-close"
+        id="project-close"
+        type="button"
+        aria-label="Fermer la galerie"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="lightbox-stage">
+
+      <button
+        class="lightbox-nav lightbox-prev"
+        id="project-prev"
+        type="button"
+        aria-label="Photo précédente"
+      >
+        ‹
+      </button>
+
+
+      <img
+        id="project-image"
+        src=""
+        alt=""
+      >
+
+
+      <button
+        class="lightbox-nav lightbox-next"
+        id="project-next"
+        type="button"
+        aria-label="Photo suivante"
+      >
+        ›
+      </button>
+
+    </div>
+
+
+    <div class="lightbox-footer">
+
+      <span
+        class="lightbox-counter"
+        id="project-counter"
+      ></span>
+
+    </div>
+
   </div>
 
+
+  <!-- =======================================================
+       LIGHTBOX SIMPLE DES ANCIENNES PHOTOS
+       ======================================================= -->
+
+  <div
+    class="simple-lightbox"
+    id="simple-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image agrandie"
+  >
+
+    <button
+      class="simple-close"
+      id="simple-close"
+      type="button"
+      aria-label="Fermer l'image"
+    >
+      ×
+    </button>
+
+    <img
+      id="simple-image"
+      src=""
+      alt="Réalisation Txipa Ébénisterie"
+    >
+
+  </div>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
   <script>
-    const galerie = document.getElementById('galerie');
-    const images = galerie.querySelectorAll('img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const lightboxDesc = document.getElementById('lightbox-description');
 
-    galerie.innerHTML += galerie.innerHTML;
+    /* =======================================================
+       PROJET SALLE DE BAIN
 
-    galerie.addEventListener('click', e => {
-      if (e.target.tagName === 'IMG') {
-        lightboxImg.src = e.target.src;
-        lightboxDesc.textContent = e.target.dataset.description || '';
-        lightbox.classList.add('visible');
-        galerie.style.animationPlayState = 'paused';
+       Pour un futur projet, cette structure pourra être
+       généralisée sans modifier la lightbox.
+       ======================================================= */
+
+    const bathroomProject = {
+      title: "Meubles de salle de bain en frêne massif",
+
+      images: [
+        {
+          src: "images/20260926_165205.jpg",
+          alt: "Meuble de salle de bain sur mesure en frêne massif"
+        },
+        {
+          src: "images/20260926_165223.jpg",
+          alt: "Vue latérale du meuble de salle de bain en frêne massif"
+        },
+        {
+          src: "images/20260927_104154.jpg",
+          alt: "Meuble suspendu en frêne massif installé dans une salle de bain"
+        }
+      ]
+    };
+
+
+    /* =======================================================
+       ÉLÉMENTS LIGHTBOX PROJET
+       ======================================================= */
+
+    const projectLightbox =
+      document.getElementById("project-lightbox");
+
+    const projectImage =
+      document.getElementById("project-image");
+
+    const projectCounter =
+      document.getElementById("project-counter");
+
+    const projectClose =
+      document.getElementById("project-close");
+
+    const projectPrev =
+      document.getElementById("project-prev");
+
+    const projectNext =
+      document.getElementById("project-next");
+
+    const projectButtons =
+      document.querySelectorAll("[data-project-index]");
+
+    const openProjectButton =
+      document.getElementById("open-project");
+
+
+    let currentProjectImage = 0;
+
+
+    function updateProjectImage() {
+
+      const image =
+        bathroomProject.images[currentProjectImage];
+
+      projectImage.src = image.src;
+      projectImage.alt = image.alt;
+
+      projectCounter.textContent =
+        `${currentProjectImage + 1} / ${bathroomProject.images.length}`;
+    }
+
+
+    function openProject(index = 0) {
+
+      currentProjectImage = index;
+
+      updateProjectImage();
+
+      projectLightbox.classList.add("visible");
+
+      document.body.classList.add("no-scroll");
+    }
+
+
+    function closeProject() {
+
+      projectLightbox.classList.remove("visible");
+
+      document.body.classList.remove("no-scroll");
+    }
+
+
+    function nextProjectImage() {
+
+      currentProjectImage =
+        (currentProjectImage + 1) %
+        bathroomProject.images.length;
+
+      updateProjectImage();
+    }
+
+
+    function previousProjectImage() {
+
+      currentProjectImage =
+        (
+          currentProjectImage
+          - 1
+          + bathroomProject.images.length
+        ) %
+        bathroomProject.images.length;
+
+      updateProjectImage();
+    }
+
+
+    projectButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const index =
+          Number(button.dataset.projectIndex);
+
+        openProject(index);
+      });
+
+    });
+
+
+    openProjectButton.addEventListener(
+      "click",
+      () => openProject(0)
+    );
+
+
+    projectClose.addEventListener(
+      "click",
+      closeProject
+    );
+
+
+    projectNext.addEventListener(
+      "click",
+      nextProjectImage
+    );
+
+
+    projectPrev.addEventListener(
+      "click",
+      previousProjectImage
+    );
+
+
+    /*
+      Clic sur le fond de la galerie = fermeture.
+      Un clic sur l'image ne ferme pas la galerie.
+    */
+
+    projectLightbox.addEventListener(
+      "click",
+      event => {
+
+        if (event.target === projectLightbox) {
+          closeProject();
+        }
+
       }
-    });
+    );
 
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('visible');
-      galerie.style.animationPlayState = 'running';
-    });
 
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        lightbox.classList.remove('visible');
-        galerie.style.animationPlayState = 'running';
+    /* =======================================================
+       NAVIGATION CLAVIER
+       ======================================================= */
+
+    document.addEventListener("keydown", event => {
+
+      if (projectLightbox.classList.contains("visible")) {
+
+        if (event.key === "Escape") {
+          closeProject();
+        }
+
+        if (event.key === "ArrowRight") {
+          nextProjectImage();
+        }
+
+        if (event.key === "ArrowLeft") {
+          previousProjectImage();
+        }
+
       }
+
     });
+
+
+    /* =======================================================
+       SWIPE MOBILE
+       ======================================================= */
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    projectLightbox.addEventListener(
+      "touchstart",
+      event => {
+
+        touchStartX =
+          event.changedTouches[0].screenX;
+
+      },
+      { passive: true }
+    );
+
+
+    projectLightbox.addEventListener(
+      "touchend",
+      event => {
+
+        touchEndX =
+          event.changedTouches[0].screenX;
+
+        const difference =
+          touchStartX - touchEndX;
+
+        /*
+          On exige 50 px de mouvement pour éviter
+          les changements accidentels.
+        */
+
+        if (Math.abs(difference) < 50) {
+          return;
+        }
+
+        if (difference > 0) {
+          nextProjectImage();
+        } else {
+          previousProjectImage();
+        }
+
+      },
+      { passive: true }
+    );
+
+
+    /* =======================================================
+       AUTRES RÉALISATIONS
+       ======================================================= */
+
+    const simpleLightbox =
+      document.getElementById("simple-lightbox");
+
+    const simpleImage =
+      document.getElementById("simple-image");
+
+    const simpleClose =
+      document.getElementById("simple-close");
+
+
+    function openSimpleImage(src, alt = "") {
+
+      simpleImage.src = src;
+      simpleImage.alt = alt;
+
+      simpleLightbox.classList.add("visible");
+
+      document.body.classList.add("no-scroll");
+    }
+
+
+    function closeSimpleImage() {
+
+      simpleLightbox.classList.remove("visible");
+
+      document.body.classList.remove("no-scroll");
+    }
+
+
+    document
+      .querySelectorAll(".work-card")
+      .forEach(card => {
+
+        card.addEventListener("click", () => {
+
+          const img =
+            card.querySelector("img");
+
+          openSimpleImage(
+            card.dataset.image,
+            img.alt
+          );
+
+        });
+
+      });
+
+
+    simpleClose.addEventListener(
+      "click",
+      closeSimpleImage
+    );
+
+
+    simpleLightbox.addEventListener(
+      "click",
+      event => {
+
+        if (event.target === simpleLightbox) {
+          closeSimpleImage();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape"
+          &&
+          simpleLightbox.classList.contains("visible")
+        ) {
+          closeSimpleImage();
+        }
+
+      }
+    );
+
+
+    /* =======================================================
+       ANCIENNES PHOTOS NON ENCORE CLASSÉES
+
+       Je conserve les fichiers sans leur attribuer de projet
+       ou de description que nous n'avons pas vérifiés.
+       ======================================================= */
+
+    const archiveImages = [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "6.png",
+      "7.png",
+      "8.png",
+      "9.png",
+      "10.png",
+      "11.png",
+      "12.png",
+      "13.png",
+      "14.png",
+      "15.png",
+      "16.png",
+      "17.png",
+      "18.png",
+      "19.png",
+      "20.png",
+      "21.png",
+      "22.png",
+      "24.png",
+      "25.png"
+    ];
+
+
+    const archiveGrid =
+      document.getElementById("archive-grid");
+
+
+    archiveImages.forEach(filename => {
+
+      const button =
+        document.createElement("button");
+
+      button.type = "button";
+      button.className =
+        "archive-item reveal";
+
+
+      const image =
+        document.createElement("img");
+
+      image.src =
+        `images/${filename}`;
+
+      image.alt =
+        "Réalisation Txipa Ébénisterie";
+
+      image.loading =
+        "lazy";
+
+
+      button.appendChild(image);
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          openSimpleImage(
+            image.src,
+            image.alt
+          );
+
+        }
+      );
+
+
+      archiveGrid.appendChild(button);
+
+    });
+
+
+    /* =======================================================
+       ANIMATIONS D'APPARITION
+       ======================================================= */
+
+    const reducedMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+
+    if (!reducedMotion) {
+
+      const observer =
+        new IntersectionObserver(
+
+          entries => {
+
+            entries.forEach(entry => {
+
+              if (entry.isIntersecting) {
+
+                entry.target
+                  .classList
+                  .add("visible");
+
+                observer.unobserve(
+                  entry.target
+                );
+              }
+
+            });
+
+          },
+
+          {
+            threshold: 0.08
+          }
+
+        );
+
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach(element => {
+
+          observer.observe(element);
+
+        });
+
+    } else {
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach(element => {
+
+          element.classList.add("visible");
+
+        });
+
+    }
+
   </script>
+
 </body>
 </html>
