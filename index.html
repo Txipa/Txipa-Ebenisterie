@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Txipa Ébénisterie | Meubles sur mesure et agencements bois à Romainville</title>
+  <title>Txipa Ébénisterie | Ébéniste, meubles et agencements sur mesure à Romainville</title>
 
   <meta
     name="description"
-    content="Txipa Ébénisterie, atelier de menuiserie, d'ébénisterie et d'agencement à Romainville. Création de meubles et aménagements sur mesure."
+    content="Txipa Ébénisterie, atelier d'ébénisterie, menuiserie et agencement à Romainville. Conception et fabrication de meubles et aménagements sur mesure en Île-de-France."
   >
 
   <meta name="author" content="Txipa Ébénisterie">
   <meta name="theme-color" content="#00201E">
 
-  <meta property="og:title" content="Txipa Ébénisterie – création de meubles sur mesure en bois">
+  <meta property="og:title" content="Txipa Ébénisterie – meubles et agencements sur mesure">
 
   <meta
     property="og:description"
-    content="Atelier d'ébénisterie, de menuiserie et d'agencement à Romainville. Fabrication artisanale de meubles et aménagements sur mesure."
+    content="Atelier d'ébénisterie et d'agencement à Romainville. Conception et fabrication artisanale de meubles et aménagements sur mesure."
   >
 
   <meta
@@ -29,7 +29,9 @@
 
   <meta property="og:url" content="https://txipa-ebenisterie.com">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
 
+  <link rel="canonical" href="https://txipa-ebenisterie.com/">
   <link rel="icon" href="/favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +41,37 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap"
     rel="stylesheet"
   >
+
+
+  <!-- ======================================================
+       DONNÉES STRUCTURÉES SEO
+       ====================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Txipa Ébénisterie",
+    "url": "https://txipa-ebenisterie.com/",
+    "description": "Atelier d'ébénisterie, de menuiserie et d'agencement spécialisé dans la conception et la fabrication de meubles et aménagements sur mesure.",
+    "email": "txipa.ebenisterie@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Romainville",
+      "postalCode": "93230",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France"
+    },
+    "sameAs": [
+      "https://www.instagram.com/txipa_ebenisterie/"
+    ]
+  }
+  </script>
+
 
   <style>
 
@@ -125,22 +158,22 @@
        ====================================================== */
 
     .presentation {
-      max-width: 760px;
+      max-width: 790px;
       margin: 0 auto;
       padding: 40px 25px 90px;
       text-align: center;
-      line-height: 1.75;
+      line-height: 1.8;
       color: var(--cream-soft);
     }
 
     .presentation h2 {
-      margin: 0 0 28px;
+      margin: 0 0 30px;
       font-weight: 400;
       color: var(--cream);
     }
 
     .presentation p {
-      margin: 0 0 18px;
+      margin: 0 0 20px;
     }
 
     .presentation strong {
@@ -159,9 +192,19 @@
       padding: 90px 0;
     }
 
+    .eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
 
     /* ======================================================
-       TITRE PROJETS
+       DERNIERS PROJETS
        ====================================================== */
 
     .featured-projects {
@@ -177,16 +220,6 @@
       margin: 0;
       font-size: clamp(1.7rem, 3vw, 2.4rem);
       font-weight: 400;
-    }
-
-    .eyebrow {
-      display: block;
-      margin-bottom: 15px;
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
     }
 
 
@@ -205,7 +238,7 @@
     }
 
     .project-intro {
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto 38px;
       text-align: center;
     }
@@ -218,7 +251,7 @@
     }
 
     .project-description {
-      max-width: 720px;
+      max-width: 760px;
       margin: 23px auto 0;
       color: var(--cream-soft);
       line-height: 1.8;
@@ -245,7 +278,7 @@
 
 
     /* ======================================================
-       BANDE DE PHOTOS DES PROJETS
+       PHOTOS DES PROJETS
        ====================================================== */
 
     .project-photos {
@@ -281,10 +314,6 @@
       opacity: 0.92;
     }
 
-
-    /* Pour que 3 ou 5 photos aient toutes la même hauteur
-       sans qu'aucune ne soit mise en avant */
-
     .project-photos.three .project-photo {
       max-width: 400px;
     }
@@ -292,7 +321,6 @@
     .project-photos.five .project-photo {
       max-width: 240px;
     }
-
 
     .view-project {
       display: flex;
@@ -321,7 +349,72 @@
 
 
     /* ======================================================
-       GALERIE GÉNÉRALE
+       DU PROJET À LA POSE
+       ====================================================== */
+
+    .process-section {
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .process-heading {
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .process-heading h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 400;
+    }
+
+    .process-heading p {
+      max-width: 600px;
+      margin: 20px auto 0;
+      color: var(--cream-soft);
+      line-height: 1.8;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .process-step {
+      padding: 10px 45px 15px;
+      text-align: center;
+    }
+
+    .process-step + .process-step {
+      border-left: 1px solid var(--line);
+    }
+
+    .process-number {
+      display: block;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+    }
+
+    .process-step h3 {
+      margin: 0 0 15px;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .process-step p {
+      margin: 0;
+      color: var(--cream-soft);
+      font-size: 0.84rem;
+      line-height: 1.75;
+    }
+
+
+    /* ======================================================
+       COULISSES & AUTRES RÉALISATIONS
        ====================================================== */
 
     .gallery-section {
@@ -329,14 +422,23 @@
     }
 
     .gallery-heading {
+      max-width: 700px;
+      margin: 0 auto 45px;
       text-align: center;
-      margin-bottom: 45px;
     }
 
     .gallery-heading h2 {
       margin: 0;
       font-weight: 400;
       font-size: 1.6rem;
+    }
+
+    .gallery-heading p {
+      max-width: 580px;
+      margin: 17px auto 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.7;
     }
 
     .gallery-grid {
@@ -424,12 +526,38 @@
     footer {
       max-width: 900px;
       margin: 0 auto;
-      padding: 50px 25px;
+      padding: 55px 25px;
       border-top: 1px solid var(--line);
       text-align: center;
       color: var(--cream-soft);
       font-size: 0.85rem;
       line-height: 1.7;
+    }
+
+    .txipa-definition {
+      margin-bottom: 28px;
+    }
+
+    .txipa-word {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--cream);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .txipa-meaning {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .footer-mark {
+      width: 34px;
+      height: 1px;
+      margin: 22px auto;
+      background: rgba(245, 245, 245, 0.4);
     }
 
     footer p {
@@ -447,8 +575,8 @@
 
     .footer-version {
       margin-top: 20px;
-      opacity: 0.55;
-      font-size: 0.72rem;
+      opacity: 0.45;
+      font-size: 0.68rem;
     }
 
 
@@ -636,6 +764,11 @@
         height: 220px;
       }
 
+      .process-step {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
       .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -679,10 +812,6 @@
         padding-top: 70px;
       }
 
-
-      /* Sur téléphone, on conserve la ligne horizontale.
-         L'utilisateur fait simplement glisser les photos. */
-
       .project-photos {
         justify-content: flex-start;
         overflow-x: auto;
@@ -699,6 +828,20 @@
         max-width: none;
         height: 260px;
         scroll-snap-align: center;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+      }
+
+      .process-step {
+        padding: 30px 15px;
+      }
+
+      .process-step + .process-step {
+        border-left: 0;
+        border-top: 1px solid var(--line);
       }
 
       .gallery-grid {
@@ -775,7 +918,7 @@
 
     <img
       src="file_000000005184622fa6f049d633c3f97e.png"
-      alt="Logo de Txipa Ébénisterie, artisan ébéniste à Romainville"
+      alt="Logo Txipa Ébénisterie"
     >
 
     <h1>
@@ -803,42 +946,26 @@
       </h2>
 
       <p>
-        <strong>Txipa Ébénisterie</strong> est un atelier de
-        menuiserie, d’ébénisterie et d’agencement spécialisé dans
-        la <strong>création de projets sur mesure</strong> en bois.
+        <strong>Txipa Ébénisterie</strong> conçoit et réalise
+        des <strong>meubles et agencements sur mesure</strong>,
+        pour les particuliers comme pour les professionnels.
+        Chaque projet est pensé en fonction du lieu, des usages
+        et des matériaux.
       </p>
 
       <p>
-        Nous concevons et réalisons des
-        <strong>meubles uniques</strong>, des
-        <strong>aménagements intérieurs</strong> et des
-        <strong>pièces</strong> pensés pour répondre précisément
-        aux envies et aux besoins de chaque client, particulier
-        ou professionnel.
+        Basé à <strong>Romainville en Seine-Saint-Denis</strong>,
+        l’atelier accompagne chaque réalisation du dessin à la
+        fabrication, puis à la pose. Le bois massif, les panneaux
+        plaqués et les finitions sont choisis avec attention pour
+        leur esthétique, leur provenance et leur durabilité.
       </p>
 
       <p>
-        Atelier à taille humaine basé à
-        <strong>Romainville (Seine-Saint-Denis)</strong>, nous
-        privilégions le <strong>dialogue</strong> et
-        l’accompagnement à chaque étape — du dessin à la pose —
-        pour donner vie à des créations qui vous ressemblent.
-      </p>
-
-      <p>
-        Engagés dans une démarche locale et responsable, nous
-        travaillons avec des
-        <strong>bois issus de filières durables</strong>,
-        respectueuses de l’environnement et du savoir-faire des
-        forestiers.
-      </p>
-
-      <p>
-        Chaque détail est travaillé avec soin, dans le respect
-        des matériaux et de la précision du geste, pour créer
-        des pièces <strong>authentiques, durables et
-        esthétiques</strong>, où le bois trouve naturellement
-        sa place.
+        L’objectif est simple : créer des pièces
+        <strong>justes, fonctionnelles et durables</strong>,
+        en laissant une place centrale au matériau et à la
+        précision du geste.
       </p>
 
     </section>
@@ -864,7 +991,7 @@
 
 
       <!-- ==================================================
-           PROJET 1
+           PROJET 1 - LANCIEUX
            ================================================== -->
 
       <article class="project">
@@ -878,15 +1005,19 @@
 
           <p class="project-description">
             Ensemble de meubles suspendus conçu et fabriqué sur
-            mesure en frêne massif. Des lignes sobres qui mettent
-            en valeur le veinage naturel du bois, avec une finition
-            claire pensée pour conserver la teinte et la luminosité
-            du frêne.
+            mesure en frêne massif. Les lignes sobres mettent en
+            valeur le veinage naturel du bois, protégé par une
+            finition <strong>Rubio Monocoat Oil Plus 2C –
+            Super White</strong> qui préserve la luminosité du
+            frêne. L’aménagement intègre des tiroirs LMC montés
+            sur coulisses Blum.
           </p>
 
           <div class="project-meta">
-            <span>Mobilier sur mesure</span>
             <span>Frêne massif</span>
+            <span>Rubio Monocoat</span>
+            <span>Tiroirs LMC</span>
+            <span>Coulisses Blum</span>
             <span>2026</span>
           </div>
 
@@ -904,10 +1035,11 @@
             type="button"
             data-gallery="bathroom"
             data-index="0"
+            aria-label="Voir le meuble de salle de bain en frêne massif"
           >
             <img
               src="images/20260926_165205.jpg"
-              alt="Meuble de salle de bain sur mesure en frêne massif"
+              alt="Meuble de salle de bain sur mesure en frêne massif à Lancieux"
             >
           </button>
 
@@ -917,10 +1049,11 @@
             type="button"
             data-gallery="bathroom"
             data-index="1"
+            aria-label="Voir le meuble suspendu en frêne massif"
           >
             <img
               src="images/20260926_165223.jpg"
-              alt="Meuble suspendu de salle de bain en frêne massif"
+              alt="Meuble suspendu en frêne massif avec tiroirs et vasque"
               loading="lazy"
             >
           </button>
@@ -931,10 +1064,11 @@
             type="button"
             data-gallery="bathroom"
             data-index="2"
+            aria-label="Voir le meuble de salle de bain installé"
           >
             <img
               src="images/20260927_104154.jpg"
-              alt="Meuble de salle de bain en frêne massif installé"
+              alt="Meuble de salle de bain en frêne massif installé à Lancieux"
               loading="lazy"
             >
           </button>
@@ -956,7 +1090,7 @@
 
 
       <!-- ==================================================
-           PROJET 2
+           PROJET 2 - LES LILAS
            ================================================== -->
 
       <article class="project">
@@ -969,16 +1103,19 @@
           </h3>
 
           <p class="project-description">
-            Conception et fabrication de portes coulissantes sur
-            mesure associant MDF peint et canage naturel. Le dessin
-            cintré et la transparence du canage apportent légèreté
-            et rythme à l’ensemble tout en s’intégrant au placard
-            existant.
+            Portes de placard coulissantes conçues et fabriquées
+            sur mesure en MDF peint, associées à un canage naturel
+            des <strong>Rotins Nîmois</strong>. Le dessin cintré
+            apporte légèreté et rythme à l’ensemble tout en
+            laissant respirer le canage. Les éléments peints
+            reçoivent une finition <strong>Horus de Guittet</strong>.
           </p>
 
           <div class="project-meta">
             <span>MDF peint</span>
+            <span>Horus · Guittet</span>
             <span>Canage naturel</span>
+            <span>Rotins Nîmois</span>
             <span>2026</span>
           </div>
 
@@ -996,10 +1133,11 @@
             type="button"
             data-gallery="doors"
             data-index="0"
+            aria-label="Voir les portes de placard coulissantes"
           >
             <img
               src="images/20260421_131408.jpg"
-              alt="Portes de placard coulissantes sur mesure en MDF peint et canage"
+              alt="Portes de placard coulissantes sur mesure en MDF peint et canage aux Lilas"
               loading="lazy"
             >
           </button>
@@ -1010,10 +1148,11 @@
             type="button"
             data-gallery="doors"
             data-index="1"
+            aria-label="Voir le détail du canage"
           >
             <img
               src="images/20260421_131422.jpg"
-              alt="Détail des portes coulissantes en MDF peint et canage"
+              alt="Détail des portes coulissantes cintrées en MDF peint et canage naturel"
               loading="lazy"
             >
           </button>
@@ -1024,10 +1163,11 @@
             type="button"
             data-gallery="doors"
             data-index="2"
+            aria-label="Voir le placard sur mesure"
           >
             <img
               src="images/20260421_131508.jpg"
-              alt="Placard avec portes coulissantes réalisées sur mesure"
+              alt="Placard avec portes coulissantes en canage réalisé sur mesure aux Lilas"
               loading="lazy"
             >
           </button>
@@ -1049,7 +1189,7 @@
 
 
       <!-- ==================================================
-           PROJET 3
+           PROJET 3 - CLAMART
            ================================================== -->
 
       <article class="project">
@@ -1063,18 +1203,20 @@
 
           <p class="project-description">
             Ensemble sur mesure réunissant deux bureaux, un
-            agencement mural et des portes de placard.
-            L’association du MDF peint et des panneaux plaqués
-            chêne permet de structurer l’espace tout en conservant
-            une présence chaleureuse du bois. Un projet pensé comme
-            un ensemble cohérent, adapté aux volumes et aux usages
-            de la pièce.
+            agencement mural et des portes de placard, associant
+            MDF peint et panneaux plaqués chêne. Les rangements
+            intègrent des <strong>tiroirs fabriqués à
+            l’atelier</strong>, montés sur coulisses Blum, ainsi
+            que des charnières Blum. Les éléments peints reçoivent
+            une finition <strong>Horus de Guittet</strong>.
           </p>
 
           <div class="project-meta">
-            <span>Agencement sur mesure</span>
             <span>MDF peint</span>
             <span>Panneaux plaqués chêne</span>
+            <span>Horus · Guittet</span>
+            <span>Tiroirs artisanaux</span>
+            <span>Quincaillerie Blum</span>
             <span>2026</span>
           </div>
 
@@ -1092,10 +1234,11 @@
             type="button"
             data-gallery="office"
             data-index="0"
+            aria-label="Voir les bureaux sur mesure"
           >
             <img
               src="images/20260410_131446.jpg"
-              alt="Bureaux et agencement sur mesure en MDF peint et panneaux plaqués chêne"
+              alt="Bureaux et agencement sur mesure en MDF peint et chêne à Clamart"
               loading="lazy"
             >
           </button>
@@ -1106,10 +1249,11 @@
             type="button"
             data-gallery="office"
             data-index="1"
+            aria-label="Voir l'agencement mural"
           >
             <img
               src="images/20260410_131642.jpg"
-              alt="Agencement mural sur mesure"
+              alt="Agencement mural sur mesure en panneaux plaqués chêne à Clamart"
               loading="lazy"
             >
           </button>
@@ -1120,10 +1264,11 @@
             type="button"
             data-gallery="office"
             data-index="2"
+            aria-label="Voir le bureau et les rangements"
           >
             <img
               src="images/20260410_131736.jpg"
-              alt="Bureau sur mesure et rangements"
+              alt="Bureau sur mesure et rangements en chêne et MDF peint"
               loading="lazy"
             >
           </button>
@@ -1134,10 +1279,11 @@
             type="button"
             data-gallery="office"
             data-index="3"
+            aria-label="Voir un détail de l'agencement"
           >
             <img
               src="images/20260410_131754.jpg"
-              alt="Détail du bureau et de l'agencement sur mesure"
+              alt="Détail du bureau et de l'agencement sur mesure à Clamart"
               loading="lazy"
             >
           </button>
@@ -1148,10 +1294,11 @@
             type="button"
             data-gallery="office"
             data-index="4"
+            aria-label="Voir l'ensemble de l'agencement"
           >
             <img
               src="images/20260410_132038.jpg"
-              alt="Ensemble de bureaux et rangements réalisés sur mesure"
+              alt="Ensemble de bureaux, rangements et placard réalisés sur mesure à Clamart"
               loading="lazy"
             >
           </button>
@@ -1171,12 +1318,96 @@
 
       </article>
 
+    </section>
+
+
+    <!-- ====================================================
+         DU PROJET À LA POSE
+         ==================================================== -->
+
+    <section class="section process-section">
+
+      <div class="process-heading reveal">
+
+        <span class="eyebrow">
+          Le sur-mesure
+        </span>
+
+        <h2>
+          Du projet à la pose
+        </h2>
+
+        <p>
+          Chaque réalisation est développée en fonction du lieu,
+          des usages et des envies, puis fabriquée à l’atelier.
+        </p>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-step reveal">
+
+          <span class="process-number">
+            01
+          </span>
+
+          <h3>
+            Échange & conception
+          </h3>
+
+          <p>
+            Comprendre le besoin, prendre les mesures et définir
+            ensemble les formes, les matériaux et les finitions.
+          </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+          <span class="process-number">
+            02
+          </span>
+
+          <h3>
+            Fabrication à l'atelier
+          </h3>
+
+          <p>
+            Débit, assemblage, ajustage et finition : chaque
+            élément est fabriqué et préparé avec soin à l’atelier.
+          </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+          <span class="process-number">
+            03
+          </span>
+
+          <h3>
+            Livraison & pose
+          </h3>
+
+          <p>
+            Le mobilier est livré, installé et ajusté sur place
+            pour trouver naturellement sa place dans son
+            environnement.
+          </p>
+
+        </div>
+
+      </div>
 
     </section>
 
 
     <!-- ====================================================
-         GALERIE GÉNÉRALE
+         COULISSES & AUTRES RÉALISATIONS
          ==================================================== -->
 
     <section class="section gallery-section">
@@ -1184,8 +1415,13 @@
       <div class="gallery-heading reveal">
 
         <h2>
-          Quelques réalisations
+          Coulisses & autres réalisations
         </h2>
+
+        <p>
+          Fabrication à l’atelier, détails, matières, gabarits
+          et quelques pièces réalisées au fil des projets.
+        </p>
 
       </div>
 
@@ -1239,15 +1475,26 @@
 
   <footer>
 
-    <p>
-      <em>Txipa</em> /ˈtʃipa/, n. m. (eusk.) –
-      Copeau, éclat de bois.
-    </p>
+    <div class="txipa-definition">
+
+      <span class="txipa-word">
+        Txipa
+      </span>
+
+      <span class="txipa-meaning">
+        /ˈtʃipa/ · n. m. · euskara<br>
+        Copeau, éclat de bois.
+      </span>
+
+    </div>
+
+
+    <div class="footer-mark"></div>
+
 
     <p>
-      <strong>Txipa Ébénisterie</strong> –
-      Atelier artisanal de création et restauration
-      de meubles à Romainville.
+      <strong>Txipa Ébénisterie</strong><br>
+      Meubles & agencements sur mesure · Romainville
     </p>
 
     <p>
@@ -1269,11 +1516,11 @@
     </p>
 
     <p>
-      Made in Romainville · SIRET : 80944761800020
+      SIRET : 80944761800020
     </p>
 
     <p class="footer-version">
-      V2.4
+      V2.5
     </p>
 
   </footer>
@@ -1347,7 +1594,7 @@
 
 
   <!-- ======================================================
-       LIGHTBOX GALERIE GÉNÉRALE
+       LIGHTBOX GALERIE
        ====================================================== -->
 
   <div
@@ -1379,7 +1626,7 @@
   <script>
 
     /* ======================================================
-       DONNÉES DES PROJETS
+       PROJETS
        ====================================================== */
 
     const projects = {
@@ -1478,7 +1725,7 @@
 
 
     /* ======================================================
-       LIGHTBOX DES PROJETS
+       LIGHTBOX PROJETS
        ====================================================== */
 
     const projectLightbox =
@@ -1632,7 +1879,7 @@
 
 
     /* ======================================================
-       SWIPE MOBILE LIGHTBOX
+       SWIPE MOBILE
        ====================================================== */
 
     let touchStartX = 0;
@@ -1684,7 +1931,7 @@
 
 
     /* ======================================================
-       GALERIE GÉNÉRALE
+       COULISSES & AUTRES RÉALISATIONS
        ====================================================== */
 
     const galleryImages = [
@@ -1696,12 +1943,12 @@
 
       {
         src: "images/20250603_123045.jpg",
-        alt: "Piste de dés en bois massif"
+        alt: "Piste de dés en bois massif réalisée à l'atelier"
       },
 
       {
         src: "images/20250404_172807.jpg",
-        alt: "Échiquier en chêne et frêne"
+        alt: "Échiquier artisanal en chêne et frêne"
       },
 
       {
@@ -1711,112 +1958,112 @@
 
       {
         src: "images/IMG-20250414-WA0029.jpeg",
-        alt: "Planche à découper en bois"
+        alt: "Planche à découper artisanale en bois"
       },
 
       {
         src: "images/1.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Épure pour une réalisation sur mesure"
       },
 
       {
         src: "images/2.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Gabarit utilisé pour la fabrication à l'atelier"
       },
 
       {
         src: "images/3.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Chêne utilisé pour une réalisation Txipa Ébénisterie"
       },
 
       {
         src: "images/4.png",
-        alt: "Bibliothèque sur mesure"
+        alt: "Bibliothèque réalisée sur mesure"
       },
 
       {
         src: "images/6.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Fabrication en cours à l'atelier"
       },
 
       {
         src: "images/7.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail de fabrication d'un meuble sur mesure"
       },
 
       {
         src: "images/8.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Travail d'ébénisterie à l'atelier"
       },
 
       {
         src: "images/9.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Fabrication artisanale Txipa Ébénisterie"
       },
 
       {
         src: "images/10.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail d'un projet sur mesure"
       },
 
       {
         src: "images/11.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Fabrication d'un agencement sur mesure"
       },
 
       {
         src: "images/12.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Travail du bois à l'atelier"
       },
 
       {
         src: "images/13.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail de menuiserie et d'ébénisterie"
       },
 
       {
         src: "images/14.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Réalisation sur mesure Txipa Ébénisterie"
       },
 
       {
         src: "images/15.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Étape de fabrication à l'atelier"
       },
 
       {
         src: "images/16.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail de fabrication d'un mobilier sur mesure"
       },
 
       {
         src: "images/17.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Travail artisanal du bois"
       },
 
       {
         src: "images/18.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Réalisation en cours à l'atelier"
       },
 
       {
         src: "images/19.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail d'un meuble fabriqué sur mesure"
       },
 
       {
         src: "images/20.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Fabrication d'un meuble à l'atelier"
       },
 
       {
         src: "images/21.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Réalisation artisanale en bois"
       },
 
       {
         src: "images/22.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail d'un agencement en bois"
       },
 
       {
@@ -1826,7 +2073,7 @@
 
       {
         src: "images/25.png",
-        alt: "Réalisation Txipa Ébénisterie"
+        alt: "Détail d'une réalisation sur mesure"
       }
 
     ];
