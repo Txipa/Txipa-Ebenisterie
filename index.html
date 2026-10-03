@@ -16,14 +16,17 @@
   <meta name="theme-color" content="#00201E">
 
   <meta property="og:title" content="Txipa Ébénisterie – meubles et agencements sur mesure">
+
   <meta
     property="og:description"
     content="Conception et fabrication artisanale de meubles et agencements sur mesure. Atelier à Montreuil."
   >
+
   <meta
     property="og:image"
-    content="https://txipa-ebenisterie.com/images/20260926_165205.jpg"
+    content="https://txipa-ebenisterie.com/images/01_Salle%20de%20bain_Lancieux/ACCUEIL_Meuble%20vasque%20en%20fr%C3%AAne%20massif_1.jpg"
   >
+
   <meta property="og:url" content="https://txipa-ebenisterie.com">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
@@ -219,7 +222,7 @@
 
 
     /* ======================================================
-       PROJETS
+       PROJETS PRINCIPAUX
        ====================================================== */
 
     .featured-projects {
@@ -285,11 +288,6 @@
       font-weight: 400;
       letter-spacing: 0.05em;
     }
-
-
-    /* ======================================================
-       PHOTOS PROJETS
-       ====================================================== */
 
     .project-photos {
       display: flex;
@@ -359,7 +357,7 @@
 
 
     /* ======================================================
-       V2.7 - BANDE CLAIRE : DU PROJET À LA POSE
+       DU PROJET À LA POSE
        ====================================================== */
 
     .process-band {
@@ -439,7 +437,7 @@
 
 
     /* ======================================================
-       COULISSES & AUTRES RÉALISATIONS
+       COULISSES
        ====================================================== */
 
     .gallery-section {
@@ -500,7 +498,116 @@
 
 
     /* ======================================================
-       V2.7 - CONTACT SUR FOND CLAIR
+       ARCHIVES
+       ====================================================== */
+
+    .archives-section {
+      border-top: 1px solid var(--line);
+      padding-top: 90px;
+      padding-bottom: 110px;
+    }
+
+    .archives-heading {
+      max-width: 680px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .archives-heading h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 400;
+    }
+
+    .archives-heading p {
+      max-width: 560px;
+      margin: 17px auto 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.75;
+    }
+
+    .archives-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .archive-card {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--cream);
+      text-align: left;
+      cursor: pointer;
+      overflow: hidden;
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(245, 245, 245, 0.3);
+    }
+
+    .archive-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--green-soft);
+    }
+
+    .archive-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.88;
+      transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
+    }
+
+    .archive-card:hover .archive-image img {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+
+    .archive-info {
+      padding: 22px 24px 24px;
+    }
+
+    .archive-info h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .archive-info p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    .archive-arrow {
+      display: inline-block;
+      margin-top: 17px;
+      color: var(--cream);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid rgba(245,245,245,0.45);
+      padding-bottom: 3px;
+    }
+
+
+    /* ======================================================
+       CONTACT
        ====================================================== */
 
     .contact {
@@ -721,7 +828,7 @@
 
 
     /* ======================================================
-       V2.7 - LIGHTBOX GALERIE + LÉGENDE
+       LIGHTBOX IMAGE + LÉGENDE
        ====================================================== */
 
     .image-lightbox {
@@ -935,6 +1042,20 @@
         gap: 7px;
       }
 
+      .archives-section {
+        padding-top: 65px;
+        padding-bottom: 75px;
+      }
+
+      .archives-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .archive-info {
+        padding: 19px 20px 21px;
+      }
+
       .contact {
         padding: 80px 20px;
       }
@@ -1013,6 +1134,7 @@
 
 
   <main>
+
 
     <!-- ====================================================
          PRÉSENTATION
@@ -1093,7 +1215,7 @@
       </div>
 
 
-      <!-- PROJET 1 -->
+      <!-- PROJET 1 : LANCIEUX -->
 
       <article class="project">
 
@@ -1133,23 +1255,23 @@
 
           <button class="project-photo reveal" type="button" data-gallery="bathroom" data-index="0">
             <img
-              src="images/20260926_165205.jpg"
-              alt="Meuble de salle de bain sur mesure en frêne massif à Lancieux"
+              src="images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_1.jpg"
+              alt="Meuble vasque en frêne massif"
             >
           </button>
 
           <button class="project-photo reveal" type="button" data-gallery="bathroom" data-index="1">
             <img
-              src="images/20260926_165223.jpg"
-              alt="Meuble suspendu en frêne massif"
+              src="images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_2.jpg"
+              alt="Meuble vasque en frêne massif"
               loading="lazy"
             >
           </button>
 
           <button class="project-photo reveal" type="button" data-gallery="bathroom" data-index="2">
             <img
-              src="images/20260927_104154.jpg"
-              alt="Meuble de salle de bain en frêne massif installé"
+              src="images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_3.jpg"
+              alt="Meuble vasque en frêne massif"
               loading="lazy"
             >
           </button>
@@ -1163,7 +1285,79 @@
       </article>
 
 
-      <!-- PROJET 2 -->
+      <!-- PROJET 2 : CLAMART -->
+
+      <article class="project">
+
+        <div class="project-intro reveal">
+
+          <h3>
+            Bureaux, porte de placard<br>
+            et agencement sur mesure
+          </h3>
+
+          <p class="project-description">
+            Ensemble sur mesure réunissant deux bureaux, un
+            agencement mural et des portes de placard, associant
+            MDF peint et panneaux plaqués chêne. Les rangements
+            intègrent des <strong>tiroirs fabriqués à
+            l’atelier</strong>, montés sur coulisses Blum, ainsi
+            que des charnières Blum. Les éléments peints reçoivent
+            une finition <strong>Horus de Guittet</strong>.
+          </p>
+
+          <div class="project-meta">
+            <span>MDF peint</span>
+            <span>Panneaux plaqués chêne</span>
+            <span>Horus · Guittet</span>
+            <span>Tiroirs artisanaux</span>
+            <span>Quincaillerie Blum</span>
+            <span>2026</span>
+          </div>
+
+          <div class="project-location">
+            Clamart · Hauts-de-Seine
+          </div>
+
+        </div>
+
+
+        <div class="project-photos three">
+
+          <button class="project-photo reveal" type="button" data-gallery="office" data-index="0">
+            <img
+              src="images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_1.jpg"
+              alt="Aménagement sur mesure à Clamart"
+              loading="lazy"
+            >
+          </button>
+
+          <button class="project-photo reveal" type="button" data-gallery="office" data-index="1">
+            <img
+              src="images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_2.jpg"
+              alt="Bureau et rangements sur mesure à Clamart"
+              loading="lazy"
+            >
+          </button>
+
+          <button class="project-photo reveal" type="button" data-gallery="office" data-index="2">
+            <img
+              src="images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_3.jpg"
+              alt="Agencement mural à Clamart"
+              loading="lazy"
+            >
+          </button>
+
+        </div>
+
+        <button class="view-project" type="button" data-gallery="office" data-index="0">
+          Voir le projet <span>→</span>
+        </button>
+
+      </article>
+
+
+      <!-- PROJET 3 : LES LILAS -->
 
       <article class="project">
 
@@ -1202,7 +1396,7 @@
 
           <button class="project-photo reveal" type="button" data-gallery="doors" data-index="0">
             <img
-              src="images/20260421_131408.jpg"
+              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_1.jpg"
               alt="Portes de placard coulissantes sur mesure aux Lilas"
               loading="lazy"
             >
@@ -1210,15 +1404,15 @@
 
           <button class="project-photo reveal" type="button" data-gallery="doors" data-index="1">
             <img
-              src="images/20260421_131422.jpg"
-              alt="Détail des portes coulissantes en MDF peint et canage"
+              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_2.jpg"
+              alt="Portes coulissantes en MDF peint et canage"
               loading="lazy"
             >
           </button>
 
           <button class="project-photo reveal" type="button" data-gallery="doors" data-index="2">
             <img
-              src="images/20260421_131508.jpg"
+              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_3.jpg"
               alt="Placard avec portes coulissantes sur mesure"
               loading="lazy"
             >
@@ -1232,79 +1426,11 @@
 
       </article>
 
-
-      <!-- PROJET 3 -->
-
-      <article class="project">
-
-        <div class="project-intro reveal">
-
-          <h3>
-            Bureaux, porte de placard<br>
-            et agencement sur mesure
-          </h3>
-
-          <p class="project-description">
-            Ensemble sur mesure réunissant deux bureaux, un
-            agencement mural et des portes de placard, associant
-            MDF peint et panneaux plaqués chêne. Les rangements
-            intègrent des <strong>tiroirs fabriqués à
-            l’atelier</strong>, montés sur coulisses Blum, ainsi
-            que des charnières Blum. Les éléments peints reçoivent
-            une finition <strong>Horus de Guittet</strong>.
-          </p>
-
-          <div class="project-meta">
-            <span>MDF peint</span>
-            <span>Panneaux plaqués chêne</span>
-            <span>Horus · Guittet</span>
-            <span>Tiroirs artisanaux</span>
-            <span>Quincaillerie Blum</span>
-            <span>2026</span>
-          </div>
-
-          <div class="project-location">
-            Clamart · Hauts-de-Seine
-          </div>
-
-        </div>
-
-
-        <div class="project-photos five">
-
-          <button class="project-photo reveal" type="button" data-gallery="office" data-index="0">
-            <img src="images/20260410_131446.jpg" alt="Bureaux et agencement sur mesure à Clamart" loading="lazy">
-          </button>
-
-          <button class="project-photo reveal" type="button" data-gallery="office" data-index="1">
-            <img src="images/20260410_131642.jpg" alt="Agencement mural sur mesure à Clamart" loading="lazy">
-          </button>
-
-          <button class="project-photo reveal" type="button" data-gallery="office" data-index="2">
-            <img src="images/20260410_131736.jpg" alt="Bureau sur mesure et rangements" loading="lazy">
-          </button>
-
-          <button class="project-photo reveal" type="button" data-gallery="office" data-index="3">
-            <img src="images/20260410_131754.jpg" alt="Détail du bureau sur mesure" loading="lazy">
-          </button>
-
-          <button class="project-photo reveal" type="button" data-gallery="office" data-index="4">
-            <img src="images/20260410_132038.jpg" alt="Ensemble de bureaux et rangements sur mesure" loading="lazy">
-          </button>
-
-        </div>
-
-        <button class="view-project" type="button" data-gallery="office" data-index="0">
-          Voir le projet <span>→</span>
-        </button>
-
-      </article>
-
     </section>
 
 
     <!-- ====================================================
-         V2.7 - BANDE CLAIRE / PROCESSUS
+         PROCESSUS
          ==================================================== -->
 
     <div class="process-band">
@@ -1387,7 +1513,7 @@
 
 
     <!-- ====================================================
-         COULISSES & AUTRES RÉALISATIONS
+         COULISSES
          ==================================================== -->
 
     <section class="section gallery-section">
@@ -1412,7 +1538,107 @@
 
 
     <!-- ====================================================
-         V2.7 - CONTACT SUR FOND CLAIR
+         ARCHIVES
+         ==================================================== -->
+
+    <section class="section archives-section">
+
+      <div class="archives-heading reveal">
+
+        <span class="eyebrow">
+          Archives
+        </span>
+
+        <h2>
+          Quelques projets passés
+        </h2>
+
+        <p>
+          D’autres réalisations, aménagements et interventions
+          menés au fil des projets.
+        </p>
+
+      </div>
+
+
+      <div class="archives-grid">
+
+        <button
+          class="archive-card reveal"
+          type="button"
+          data-archive="vincennes"
+        >
+
+          <div class="archive-image">
+
+            <img
+              src="images/Projets_archives/Aménagement_placard_Vincennes/Aménagement global.png"
+              alt="Aménagement de placard sur mesure à Vincennes"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="archive-info">
+
+            <h3>
+              Aménagement de placard
+            </h3>
+
+            <p>
+              Vincennes · Val-de-Marne
+            </p>
+
+            <span class="archive-arrow">
+              Voir la réalisation →
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <button
+          class="archive-card reveal"
+          type="button"
+          data-archive="volets"
+        >
+
+          <div class="archive-image">
+
+            <img
+              src="images/Projets_archives/Restauration_Volet_Paris17/Volets repeint.png"
+              alt="Restauration de volets à Paris"
+              loading="lazy"
+            >
+
+          </div>
+
+          <div class="archive-info">
+
+            <h3>
+              Restauration de volets
+            </h3>
+
+            <p>
+              Paris 17e
+            </p>
+
+            <span class="archive-arrow">
+              Voir la réalisation →
+            </span>
+
+          </div>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         CONTACT
          ==================================================== -->
 
     <section class="contact">
@@ -1497,7 +1723,7 @@
     </p>
 
     <p class="footer-version">
-      V2.7
+      V2.8
     </p>
 
   </footer>
@@ -1513,7 +1739,12 @@
 
       <p class="lightbox-title" id="lightbox-title"></p>
 
-      <button class="lightbox-close" id="project-close" type="button">
+      <button
+        class="lightbox-close"
+        id="project-close"
+        type="button"
+        aria-label="Fermer"
+      >
         ×
       </button>
 
@@ -1521,13 +1752,23 @@
 
     <div class="lightbox-stage">
 
-      <button class="lightbox-nav lightbox-prev" id="project-prev" type="button">
+      <button
+        class="lightbox-nav lightbox-prev"
+        id="project-prev"
+        type="button"
+        aria-label="Photo précédente"
+      >
         ‹
       </button>
 
       <img id="project-image" src="" alt="">
 
-      <button class="lightbox-nav lightbox-next" id="project-next" type="button">
+      <button
+        class="lightbox-nav lightbox-next"
+        id="project-next"
+        type="button"
+        aria-label="Photo suivante"
+      >
         ›
       </button>
 
@@ -1541,17 +1782,28 @@
 
 
   <!-- ======================================================
-       V2.7 - LIGHTBOX GALERIE AVEC LÉGENDE
+       LIGHTBOX IMAGE / COULISSES / ARCHIVES
        ====================================================== -->
 
   <div class="image-lightbox" id="image-lightbox">
 
-    <button class="image-close" id="image-close" type="button">
+    <button
+      class="image-close"
+      id="image-close"
+      type="button"
+      aria-label="Fermer"
+    >
       ×
     </button>
 
     <div class="image-lightbox-visual">
-      <img id="image-lightbox-img" src="" alt="">
+
+      <img
+        id="image-lightbox-img"
+        src=""
+        alt=""
+      >
+
     </div>
 
     <div class="image-caption">
@@ -1574,71 +1826,121 @@
   <script>
 
     /* ======================================================
-       PROJETS
+       PROJETS PRINCIPAUX
        ====================================================== */
 
     const projects = {
 
       bathroom: {
-        title: "Meubles de salle de bain · Frêne massif · Lancieux",
+
+        title:
+          "Meubles de salle de bain · Frêne massif · Lancieux",
+
         images: [
+
           {
-            src: "images/20260926_165205.jpg",
-            alt: "Meuble de salle de bain sur mesure en frêne massif"
+            src:
+              "images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_1.jpg",
+            alt:
+              "Meuble vasque en frêne massif"
           },
+
           {
-            src: "images/20260926_165223.jpg",
-            alt: "Meuble suspendu de salle de bain en frêne massif"
+            src:
+              "images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_2.jpg",
+            alt:
+              "Meuble vasque en frêne massif"
           },
+
           {
-            src: "images/20260927_104154.jpg",
-            alt: "Meuble de salle de bain en frêne massif installé"
+            src:
+              "images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_3.jpg",
+            alt:
+              "Meuble vasque en frêne massif"
           }
+
         ]
+
       },
 
-      doors: {
-        title: "Portes coulissantes · MDF peint & canage · Les Lilas",
-        images: [
-          {
-            src: "images/20260421_131408.jpg",
-            alt: "Portes de placard coulissantes sur mesure"
-          },
-          {
-            src: "images/20260421_131422.jpg",
-            alt: "Détail des portes coulissantes en MDF peint et canage"
-          },
-          {
-            src: "images/20260421_131508.jpg",
-            alt: "Placard avec portes coulissantes réalisées sur mesure"
-          }
-        ]
-      },
 
       office: {
-        title: "Bureaux & agencement sur mesure · Clamart",
+
+        title:
+          "Bureaux & agencement sur mesure · Clamart",
+
         images: [
+
           {
-            src: "images/20260410_131446.jpg",
-            alt: "Bureaux et agencement sur mesure"
+            src:
+              "images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_1.jpg",
+            alt:
+              "Aménagement sur mesure à Clamart"
           },
+
           {
-            src: "images/20260410_131642.jpg",
-            alt: "Agencement mural sur mesure"
+            src:
+              "images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_2.jpg",
+            alt:
+              "Bureau et rangements sur mesure à Clamart"
           },
+
           {
-            src: "images/20260410_131736.jpg",
-            alt: "Bureau sur mesure et rangements"
+            src:
+              "images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_3.jpg",
+            alt:
+              "Agencement mural à Clamart"
           },
+
           {
-            src: "images/20260410_131754.jpg",
-            alt: "Détail du bureau et de l'agencement"
+            src:
+              "images/02_Bureaux_Clamart/Ensemble pièce.jpg",
+            alt:
+              "Ensemble de la pièce aménagée"
           },
+
           {
-            src: "images/20260410_132038.jpg",
-            alt: "Ensemble de bureaux et rangements sur mesure"
+            src:
+              "images/02_Bureaux_Clamart/Meuble tiroirs et plateau imprimante.jpg",
+            alt:
+              "Meuble à tiroirs et plateau pour imprimante"
           }
+
         ]
+
+      },
+
+
+      doors: {
+
+        title:
+          "Portes coulissantes · MDF peint & canage · Les Lilas",
+
+        images: [
+
+          {
+            src:
+              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_1.jpg",
+            alt:
+              "Portes de placard coulissantes sur mesure"
+          },
+
+          {
+            src:
+              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_2.jpg",
+            alt:
+              "Portes coulissantes en MDF peint et canage"
+          },
+
+          {
+            src:
+              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_3.jpg",
+            alt:
+              "Placard avec portes coulissantes sur mesure"
+          }
+
+        ]
+
       }
 
     };
@@ -1672,12 +1974,20 @@
 
     function updateProjectImage() {
 
-      const project = projects[currentGallery];
-      const current = project.images[currentProjectIndex];
+      const project =
+        projects[currentGallery];
 
-      projectImage.src = current.src;
-      projectImage.alt = current.alt;
-      projectTitle.textContent = project.title;
+      const current =
+        project.images[currentProjectIndex];
+
+      projectImage.src =
+        current.src;
+
+      projectImage.alt =
+        current.alt;
+
+      projectTitle.textContent =
+        project.title;
 
       projectCounter.textContent =
         `${currentProjectIndex + 1} / ${project.images.length}`;
@@ -1687,8 +1997,11 @@
 
     function openProject(gallery, index = 0) {
 
-      currentGallery = gallery;
-      currentProjectIndex = index;
+      currentGallery =
+        gallery;
+
+      currentProjectIndex =
+        index;
 
       updateProjectImage();
 
@@ -1708,10 +2021,12 @@
 
     function nextProjectImage() {
 
-      const project = projects[currentGallery];
+      const project =
+        projects[currentGallery];
 
       currentProjectIndex =
-        (currentProjectIndex + 1) % project.images.length;
+        (currentProjectIndex + 1)
+        % project.images.length;
 
       updateProjectImage();
 
@@ -1720,14 +2035,16 @@
 
     function previousProjectImage() {
 
-      const project = projects[currentGallery];
+      const project =
+        projects[currentGallery];
 
       currentProjectIndex =
         (
           currentProjectIndex
           - 1
           + project.images.length
-        ) % project.images.length;
+        )
+        % project.images.length;
 
       updateProjectImage();
 
@@ -1738,25 +2055,39 @@
       .querySelectorAll("[data-gallery]")
       .forEach(button => {
 
-        button.addEventListener("click", () => {
+        button.addEventListener(
+          "click",
+          () => {
 
-          openProject(
-            button.dataset.gallery,
-            Number(button.dataset.index)
-          );
+            openProject(
+              button.dataset.gallery,
+              Number(button.dataset.index)
+            );
 
-        });
+          }
+        );
 
       });
 
 
-    projectClose.addEventListener("click", closeProject);
-    projectPrev.addEventListener("click", previousProjectImage);
-    projectNext.addEventListener("click", nextProjectImage);
+    projectClose.addEventListener(
+      "click",
+      closeProject
+    );
+
+    projectPrev.addEventListener(
+      "click",
+      previousProjectImage
+    );
+
+    projectNext.addEventListener(
+      "click",
+      nextProjectImage
+    );
 
 
     /* ======================================================
-       SWIPE MOBILE PROJETS
+       SWIPE PROJETS
        ====================================================== */
 
     let touchStartX = 0;
@@ -1784,14 +2115,22 @@
         const difference =
           touchStartX - touchEndX;
 
-        if (Math.abs(difference) < 50) {
+        if (
+          Math.abs(difference) < 50
+        ) {
           return;
         }
 
-        if (difference > 0) {
+        if (
+          difference > 0
+        ) {
+
           nextProjectImage();
+
         } else {
+
           previousProjectImage();
+
         }
 
       },
@@ -1800,223 +2139,8 @@
 
 
     /* ======================================================
-       GALERIE + LÉGENDES
+       LIGHTBOX IMAGE GÉNÉRALE
        ====================================================== */
-
-    /*
-      Pour les images dont le contenu est certain, les légendes
-      sont déjà renseignées.
-
-      Pour les fichiers 1.png, 2.png, etc., je laisse volontairement
-      une légende neutre pour ne pas inventer le contenu des photos.
-
-      Il suffira ensuite de modifier "title" et "detail".
-    */
-
-    const galleryImages = [
-
-      {
-        src: "images/20250424_185044.jpg",
-        alt: "Échiquier artisanal en bois massif",
-        title: "Échiquier artisanal",
-        detail: "Fabrication en bois massif"
-      },
-
-      {
-        src: "images/20250603_123045.jpg",
-        alt: "Piste de dés en bois massif réalisée à l'atelier",
-        title: "Piste de dés",
-        detail: "Fabrication artisanale en bois massif"
-      },
-
-      {
-        src: "images/20250404_172807.jpg",
-        alt: "Échiquier artisanal en chêne et frêne",
-        title: "Échiquier en chêne et frêne",
-        detail: "Fabrication artisanale"
-      },
-
-      {
-        src: "images/20250317_124347.jpg",
-        alt: "Support pour vinyles en hêtre massif",
-        title: "Support pour vinyles",
-        detail: "Hêtre massif"
-      },
-
-      {
-        src: "images/IMG-20250414-WA0029.jpeg",
-        alt: "Planche à découper artisanale en bois",
-        title: "Planche à découper",
-        detail: "Fabrication artisanale en bois"
-      },
-
-
-      {
-        src: "images/1.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/2.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/3.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/4.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/6.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/7.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/8.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/9.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/10.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/11.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/12.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/13.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/14.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/15.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/16.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/17.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/18.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/19.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/20.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/21.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/22.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/24.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      },
-
-      {
-        src: "images/25.png",
-        alt: "Réalisation Txipa Ébénisterie",
-        title: "À l'atelier",
-        detail: "Fabrication & détails"
-      }
-
-    ];
-
-
-    const galleryGrid =
-      document.getElementById("gallery-grid");
 
     const imageLightbox =
       document.getElementById("image-lightbox");
@@ -2034,55 +2158,45 @@
       document.getElementById("image-close");
 
 
-    galleryImages.forEach(imageData => {
+    function openImageLightbox(
+      src,
+      alt,
+      title,
+      detail = ""
+    ) {
 
-      const button =
-        document.createElement("button");
+      imageLightboxImg.src =
+        src;
 
-      button.type = "button";
-      button.className = "gallery-item reveal";
+      imageLightboxImg.alt =
+        alt;
 
+      imageCaptionTitle.textContent =
+        title;
 
-      const image =
-        document.createElement("img");
+      imageCaptionDetail.textContent =
+        detail;
 
-      image.src = imageData.src;
-      image.alt = imageData.alt;
-      image.loading = "lazy";
+      imageLightbox.classList.add(
+        "visible"
+      );
 
+      document.body.classList.add(
+        "no-scroll"
+      );
 
-      button.appendChild(image);
-
-
-      button.addEventListener("click", () => {
-
-        imageLightboxImg.src =
-          imageData.src;
-
-        imageLightboxImg.alt =
-          imageData.alt;
-
-        imageCaptionTitle.textContent =
-          imageData.title;
-
-        imageCaptionDetail.textContent =
-          imageData.detail;
-
-        imageLightbox.classList.add("visible");
-        document.body.classList.add("no-scroll");
-
-      });
-
-
-      galleryGrid.appendChild(button);
-
-    });
+    }
 
 
     function closeImageLightbox() {
 
-      imageLightbox.classList.remove("visible");
-      document.body.classList.remove("no-scroll");
+      imageLightbox.classList.remove(
+        "visible"
+      );
+
+      document.body.classList.remove(
+        "no-scroll"
+      );
 
     }
 
@@ -2097,12 +2211,266 @@
       "click",
       event => {
 
-        if (event.target === imageLightbox) {
+        if (
+          event.target === imageLightbox
+        ) {
+
           closeImageLightbox();
+
         }
 
       }
     );
+
+
+    /* ======================================================
+       COULISSES
+       ====================================================== */
+
+    const galleryImages = [
+
+      {
+        src: "images/Coulisses/A la scie à format.png",
+        title: "À la scie à format"
+      },
+
+      {
+        src: "images/Coulisses/Bibliothèque sur mesure.png",
+        title: "Bibliothèque sur mesure"
+      },
+
+      {
+        src: "images/Coulisses/Chêne centenaire.png",
+        title: "Chêne centenaire"
+      },
+
+      {
+        src: "images/Coulisses/Dessin d'épure.png",
+        title: "Dessin d'épure"
+      },
+
+      {
+        src: "images/Coulisses/Dessou de table en carreau de faience et chêne.png",
+        title: "Dessous de table en carreau de faïence et chêne"
+      },
+
+      {
+        src: "images/Coulisses/Echiquier en frenes et placage.jpg",
+        title: "Échiquier en frêne et placage"
+      },
+
+      {
+        src: "images/Coulisses/Espace à l'atelier en construction.png",
+        title: "Espace à l'atelier en construction"
+      },
+
+      {
+        src: "images/Coulisses/Guéridon type Chapo en hêtre et inser en chêne.png",
+        title: "Guéridon en hêtre et insert en chêne"
+      },
+
+      {
+        src: "images/Coulisses/Guéridon type Chapo en hêtre et inser piste de dés.png",
+        title: "Guéridon en hêtre avec insert piste de dés"
+      },
+
+      {
+        src: "images/Coulisses/Habillage armoire IKEA fermé.png",
+        title: "Habillage d'armoire"
+      },
+
+      {
+        src: "images/Coulisses/Habillage armoire IKEA ouvert.png",
+        title: "Habillage d'armoire ouvert"
+      },
+
+      {
+        src: "images/Coulisses/Logo TXIPA.jpg",
+        title: "Txipa Ébénisterie"
+      },
+
+      {
+        src: "images/Coulisses/Petit secrétaire en panneaux et placage fermé.png",
+        title: "Petit secrétaire en panneaux et placage"
+      },
+
+      {
+        src: "images/Coulisses/Petit secrétaire en panneaux et placage ouvert.png",
+        title: "Petit secrétaire ouvert"
+      },
+
+      {
+        src: "images/Coulisses/Piste de dés en chene et feutrine.jpg",
+        title: "Piste de dés en chêne et feutrine"
+      },
+
+      {
+        src: "images/Coulisses/Planche à découper en bois de bou.png",
+        title: "Planche à découper en bois de bout"
+      },
+
+      {
+        src: "images/Coulisses/Planche à découper en hêtre.jpeg",
+        title: "Planche à découper en hêtre"
+      },
+
+      {
+        src: "images/Coulisses/Préparation gabarit inser charnière.png",
+        title: "Préparation d'un gabarit pour insert de charnière"
+      },
+
+      {
+        src: "images/Coulisses/Rabot de paume.png",
+        title: "Rabot de paume"
+      },
+
+      {
+        src: "images/Coulisses/Rangement vinyle en hêtre.jpg",
+        title: "Rangement vinyle en hêtre"
+      },
+
+      {
+        src: "images/Coulisses/Restauration de chaise.png",
+        title: "Restauration de chaise"
+      },
+
+      {
+        src: "images/Coulisses/Restauration de table de nuit.png",
+        title: "Restauration de table de nuit"
+      },
+
+      {
+        src: "images/Coulisses/Tabouret en CP peuplier et stratifié.png",
+        title: "Tabouret en contreplaqué peuplier et stratifié"
+      }
+
+    ];
+
+
+    const galleryGrid =
+      document.getElementById("gallery-grid");
+
+
+    galleryImages.forEach(
+      imageData => {
+
+        const button =
+          document.createElement("button");
+
+        button.type =
+          "button";
+
+        button.className =
+          "gallery-item reveal";
+
+
+        const image =
+          document.createElement("img");
+
+        image.src =
+          imageData.src;
+
+        image.alt =
+          imageData.title;
+
+        image.loading =
+          "lazy";
+
+
+        button.appendChild(image);
+
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            openImageLightbox(
+              imageData.src,
+              imageData.title,
+              imageData.title,
+              "Txipa Ébénisterie"
+            );
+
+          }
+        );
+
+
+        galleryGrid.appendChild(
+          button
+        );
+
+      }
+    );
+
+
+    /* ======================================================
+       ARCHIVES
+       ====================================================== */
+
+    const archives = {
+
+      vincennes: {
+
+        src:
+          "images/Projets_archives/Aménagement_placard_Vincennes/Aménagement global.png",
+
+        alt:
+          "Aménagement de placard sur mesure à Vincennes",
+
+        title:
+          "Aménagement de placard",
+
+        detail:
+          "Vincennes · Val-de-Marne"
+
+      },
+
+
+      volets: {
+
+        src:
+          "images/Projets_archives/Restauration_Volet_Paris17/Volets repeint.png",
+
+        alt:
+          "Restauration de volets à Paris 17e",
+
+        title:
+          "Restauration de volets",
+
+        detail:
+          "Paris 17e"
+
+      }
+
+    };
+
+
+    document
+      .querySelectorAll("[data-archive]")
+      .forEach(
+        card => {
+
+          card.addEventListener(
+            "click",
+            () => {
+
+              const archive =
+                archives[
+                  card.dataset.archive
+                ];
+
+              openImageLightbox(
+                archive.src,
+                archive.alt,
+                archive.title,
+                archive.detail
+              );
+
+            }
+          );
+
+        }
+      );
 
 
     /* ======================================================
@@ -2114,18 +2482,26 @@
       event => {
 
         if (
-          projectLightbox.classList.contains("visible")
+          projectLightbox
+            .classList
+            .contains("visible")
         ) {
 
-          if (event.key === "Escape") {
+          if (
+            event.key === "Escape"
+          ) {
             closeProject();
           }
 
-          if (event.key === "ArrowRight") {
+          if (
+            event.key === "ArrowRight"
+          ) {
             nextProjectImage();
           }
 
-          if (event.key === "ArrowLeft") {
+          if (
+            event.key === "ArrowLeft"
+          ) {
             previousProjectImage();
           }
 
@@ -2135,7 +2511,9 @@
 
 
         if (
-          imageLightbox.classList.contains("visible")
+          imageLightbox
+            .classList
+            .contains("visible")
           &&
           event.key === "Escape"
         ) {
@@ -2158,15 +2536,21 @@
       ).matches;
 
 
-    if (reducedMotion) {
+    if (
+      reducedMotion
+    ) {
 
       document
         .querySelectorAll(".reveal")
-        .forEach(element => {
+        .forEach(
+          element => {
 
-          element.classList.add("visible");
+            element.classList.add(
+              "visible"
+            );
 
-        });
+          }
+        );
 
     } else {
 
@@ -2175,16 +2559,25 @@
 
           entries => {
 
-            entries.forEach(entry => {
+            entries.forEach(
+              entry => {
 
-              if (entry.isIntersecting) {
+                if (
+                  entry.isIntersecting
+                ) {
 
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
+                  entry.target
+                    .classList
+                    .add("visible");
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
 
               }
-
-            });
+            );
 
           },
 
@@ -2197,11 +2590,15 @@
 
       document
         .querySelectorAll(".reveal")
-        .forEach(element => {
+        .forEach(
+          element => {
 
-          observer.observe(element);
+            observer.observe(
+              element
+            );
 
-        });
+          }
+        );
 
     }
 
