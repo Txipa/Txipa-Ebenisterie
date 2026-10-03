@@ -222,7 +222,7 @@
 
 
     /* ======================================================
-       PROJETS PRINCIPAUX
+       PROJETS
        ====================================================== */
 
     .featured-projects {
@@ -300,6 +300,7 @@
     .project-photo {
       flex: 1 1 0;
       min-width: 0;
+      max-width: 400px;
       height: 255px;
       padding: 0;
       border: 0;
@@ -320,14 +321,6 @@
     .project-photo:hover img {
       transform: scale(1.025);
       opacity: 0.92;
-    }
-
-    .project-photos.three .project-photo {
-      max-width: 400px;
-    }
-
-    .project-photos.five .project-photo {
-      max-width: 240px;
     }
 
     .view-project {
@@ -357,7 +350,7 @@
 
 
     /* ======================================================
-       DU PROJET À LA POSE
+       PROCESSUS
        ====================================================== */
 
     .process-band {
@@ -585,7 +578,6 @@
       margin: 0;
       font-size: 1rem;
       font-weight: 400;
-      line-height: 1.45;
     }
 
     .archive-info p {
@@ -598,11 +590,10 @@
     .archive-arrow {
       display: inline-block;
       margin-top: 17px;
-      color: var(--cream);
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(245,245,245,0.45);
       font-size: 0.72rem;
       letter-spacing: 0.06em;
-      border-bottom: 1px solid rgba(245,245,245,0.45);
-      padding-bottom: 3px;
     }
 
 
@@ -648,9 +639,7 @@
       color: var(--green);
       font-size: 0.8rem;
       font-weight: 400;
-      transition:
-        background 0.25s ease,
-        color 0.25s ease;
+      transition: 0.25s ease;
     }
 
     .contact-button:hover {
@@ -696,7 +685,7 @@
       width: 34px;
       height: 1px;
       margin: 22px auto;
-      background: rgba(245, 245, 245, 0.4);
+      background: rgba(245,245,245,0.4);
     }
 
     footer p {
@@ -705,11 +694,6 @@
 
     footer a {
       color: var(--cream);
-      transition: opacity 0.2s ease;
-    }
-
-    footer a:hover {
-      opacity: 0.7;
     }
 
     .footer-version {
@@ -720,7 +704,7 @@
 
 
     /* ======================================================
-       LIGHTBOX PROJETS
+       GALERIE PROJET
        ====================================================== */
 
     .project-lightbox {
@@ -729,13 +713,11 @@
       z-index: 1000;
       display: flex;
       flex-direction: column;
-      background: rgba(0, 16, 15, 0.98);
+      background: rgba(0,16,15,0.98);
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .project-lightbox.visible {
@@ -762,13 +744,11 @@
     .lightbox-close {
       width: 45px;
       height: 45px;
-      padding: 0;
       border: 0;
       background: transparent;
       color: var(--cream);
       cursor: pointer;
       font-size: 1.8rem;
-      font-weight: 300;
     }
 
     .lightbox-stage {
@@ -778,7 +758,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 25px 85px;
+      padding: 25px 85px 15px;
     }
 
     .lightbox-stage img {
@@ -794,7 +774,6 @@
       transform: translateY(-50%);
       width: 55px;
       height: 70px;
-      padding: 0;
       border: 0;
       background: transparent;
       color: var(--cream);
@@ -815,20 +794,33 @@
       right: 15px;
     }
 
-    .lightbox-footer {
-      min-height: 65px;
+    .project-caption {
+      min-height: 78px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 12px 20px 20px;
       border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .project-caption-title {
+      margin: 0;
+      color: var(--cream);
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+
+    .project-caption-detail {
+      margin: 5px 0 0;
       color: var(--muted);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
+      font-size: 0.7rem;
     }
 
 
     /* ======================================================
-       LIGHTBOX IMAGE + LÉGENDE
+       LIGHTBOX SIMPLE
        ====================================================== */
 
     .image-lightbox {
@@ -840,13 +832,11 @@
       align-items: center;
       justify-content: center;
       padding: 70px 70px 35px;
-      background: rgba(0, 16, 15, 0.98);
+      background: rgba(0,16,15,0.98);
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .image-lightbox.visible {
@@ -882,15 +872,12 @@
       color: var(--cream);
       font-size: 0.9rem;
       font-weight: 400;
-      line-height: 1.5;
     }
 
     .image-caption-detail {
       margin: 6px 0 0;
       color: var(--muted);
       font-size: 0.72rem;
-      line-height: 1.5;
-      letter-spacing: 0.04em;
     }
 
     .image-close {
@@ -899,7 +886,6 @@
       right: 20px;
       width: 50px;
       height: 50px;
-      padding: 0;
       border: 0;
       background: transparent;
       color: var(--cream);
@@ -915,9 +901,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(15px);
-      transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
     .reveal.visible {
@@ -927,7 +911,7 @@
 
 
     /* ======================================================
-       TABLETTE
+       RESPONSIVE
        ====================================================== */
 
     @media (max-width: 900px) {
@@ -948,10 +932,6 @@
     }
 
 
-    /* ======================================================
-       MOBILE
-       ====================================================== */
-
     @media (max-width: 650px) {
 
       header {
@@ -971,24 +951,9 @@
         padding-bottom: 65px;
       }
 
-      .workshop-invite-wrapper {
-        margin-top: 30px;
-      }
-
-      .workshop-invite {
-        max-width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center !important;
-      }
-
       .section {
         width: calc(100% - 30px);
         padding: 65px 0;
-      }
-
-      .projects-heading {
-        margin-bottom: 55px;
       }
 
       .project + .project {
@@ -1002,12 +967,9 @@
         gap: 10px;
         padding-bottom: 8px;
         scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
       }
 
-      .project-photo,
-      .project-photos.three .project-photo,
-      .project-photos.five .project-photo {
+      .project-photo {
         flex: 0 0 76%;
         max-width: none;
         height: 260px;
@@ -1025,7 +987,6 @@
 
       .process-grid {
         grid-template-columns: 1fr;
-        max-width: 430px;
       }
 
       .process-step {
@@ -1042,18 +1003,8 @@
         gap: 7px;
       }
 
-      .archives-section {
-        padding-top: 65px;
-        padding-bottom: 75px;
-      }
-
       .archives-grid {
         grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .archive-info {
-        padding: 19px 20px 21px;
       }
 
       .contact {
@@ -1066,7 +1017,7 @@
 
       .lightbox-nav {
         top: auto;
-        bottom: 5px;
+        bottom: 3px;
         transform: none;
       }
 
@@ -1082,11 +1033,6 @@
         padding: 65px 15px 20px;
       }
 
-      .image-caption {
-        min-height: 95px;
-        padding-top: 18px;
-      }
-
     }
 
 
@@ -1100,7 +1046,6 @@
       *::before,
       *::after {
         transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
       }
 
       .reveal {
@@ -1111,7 +1056,6 @@
     }
 
   </style>
-
 </head>
 
 
@@ -1136,9 +1080,7 @@
   <main>
 
 
-    <!-- ====================================================
-         PRÉSENTATION
-         ==================================================== -->
+    <!-- PRÉSENTATION -->
 
     <section class="presentation">
 
@@ -1152,7 +1094,7 @@
         pour les particuliers comme pour les professionnels.
         Chaque projet est pensé à partir du lieu, des usages et
         des envies, avec une attention particulière portée aux
-        proportions, aux matériaux et aux finitions.
+        matériaux, aux lignes et aux finitions.
       </p>
 
       <p>
@@ -1197,7 +1139,7 @@
 
 
     <!-- ====================================================
-         DERNIERS PROJETS
+         PROJETS RÉCENTS
          ==================================================== -->
 
     <section class="section featured-projects">
@@ -1215,7 +1157,7 @@
       </div>
 
 
-      <!-- PROJET 1 : LANCIEUX -->
+      <!-- LANCIEUX -->
 
       <article class="project">
 
@@ -1251,7 +1193,7 @@
         </div>
 
 
-        <div class="project-photos three">
+        <div class="project-photos">
 
           <button class="project-photo reveal" type="button" data-gallery="bathroom" data-index="0">
             <img
@@ -1263,7 +1205,7 @@
           <button class="project-photo reveal" type="button" data-gallery="bathroom" data-index="1">
             <img
               src="images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_2.jpg"
-              alt="Meuble vasque en frêne massif"
+              alt="Meuble suspendu en frêne massif"
               loading="lazy"
             >
           </button>
@@ -1271,7 +1213,7 @@
           <button class="project-photo reveal" type="button" data-gallery="bathroom" data-index="2">
             <img
               src="images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_3.jpg"
-              alt="Meuble vasque en frêne massif"
+              alt="Ensemble de salle de bain en frêne massif"
               loading="lazy"
             >
           </button>
@@ -1279,13 +1221,13 @@
         </div>
 
         <button class="view-project" type="button" data-gallery="bathroom" data-index="0">
-          Voir le projet <span>→</span>
+          Découvrir le projet <span>→</span>
         </button>
 
       </article>
 
 
-      <!-- PROJET 2 : CLAMART -->
+      <!-- CLAMART -->
 
       <article class="project">
 
@@ -1322,7 +1264,7 @@
         </div>
 
 
-        <div class="project-photos three">
+        <div class="project-photos">
 
           <button class="project-photo reveal" type="button" data-gallery="office" data-index="0">
             <img
@@ -1343,7 +1285,7 @@
           <button class="project-photo reveal" type="button" data-gallery="office" data-index="2">
             <img
               src="images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_3.jpg"
-              alt="Agencement mural à Clamart"
+              alt="Agencement mural sur mesure à Clamart"
               loading="lazy"
             >
           </button>
@@ -1351,13 +1293,13 @@
         </div>
 
         <button class="view-project" type="button" data-gallery="office" data-index="0">
-          Voir le projet <span>→</span>
+          Découvrir le projet <span>→</span>
         </button>
 
       </article>
 
 
-      <!-- PROJET 3 : LES LILAS -->
+      <!-- LES LILAS -->
 
       <article class="project">
 
@@ -1392,11 +1334,11 @@
         </div>
 
 
-        <div class="project-photos three">
+        <div class="project-photos">
 
           <button class="project-photo reveal" type="button" data-gallery="doors" data-index="0">
             <img
-              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_1.jpg"
+              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_1.jpg"
               alt="Portes de placard coulissantes sur mesure aux Lilas"
               loading="lazy"
             >
@@ -1404,7 +1346,7 @@
 
           <button class="project-photo reveal" type="button" data-gallery="doors" data-index="1">
             <img
-              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_2.jpg"
+              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_2.jpg"
               alt="Portes coulissantes en MDF peint et canage"
               loading="lazy"
             >
@@ -1412,7 +1354,7 @@
 
           <button class="project-photo reveal" type="button" data-gallery="doors" data-index="2">
             <img
-              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_3.jpg"
+              src="images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_3.jpg"
               alt="Placard avec portes coulissantes sur mesure"
               loading="lazy"
             >
@@ -1421,7 +1363,7 @@
         </div>
 
         <button class="view-project" type="button" data-gallery="doors" data-index="0">
-          Voir le projet <span>→</span>
+          Découvrir le projet <span>→</span>
         </button>
 
       </article>
@@ -1430,7 +1372,7 @@
 
 
     <!-- ====================================================
-         PROCESSUS
+         DU PROJET À LA POSE
          ==================================================== -->
 
     <div class="process-band">
@@ -1581,13 +1523,9 @@
 
           <div class="archive-info">
 
-            <h3>
-              Aménagement de placard
-            </h3>
+            <h3>Aménagement de placard</h3>
 
-            <p>
-              Vincennes · Val-de-Marne
-            </p>
+            <p>Vincennes · Val-de-Marne</p>
 
             <span class="archive-arrow">
               Voir la réalisation →
@@ -1608,7 +1546,7 @@
 
             <img
               src="images/Projets_archives/Restauration_Volet_Paris17/Volets repeint.png"
-              alt="Restauration de volets à Paris"
+              alt="Restauration de volets à Paris 17e"
               loading="lazy"
             >
 
@@ -1616,13 +1554,9 @@
 
           <div class="archive-info">
 
-            <h3>
-              Restauration de volets
-            </h3>
+            <h3>Restauration de volets</h3>
 
-            <p>
-              Paris 17e
-            </p>
+            <p>Paris 17e</p>
 
             <span class="archive-arrow">
               Voir la réalisation →
@@ -1637,9 +1571,7 @@
     </section>
 
 
-    <!-- ====================================================
-         CONTACT
-         ==================================================== -->
+    <!-- CONTACT -->
 
     <section class="contact">
 
@@ -1674,9 +1606,7 @@
   </main>
 
 
-  <!-- ======================================================
-       FOOTER
-       ====================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1723,14 +1653,14 @@
     </p>
 
     <p class="footer-version">
-      V2.8
+      V2.8.1
     </p>
 
   </footer>
 
 
   <!-- ======================================================
-       LIGHTBOX PROJETS
+       LIGHTBOX PROJET
        ====================================================== -->
 
   <div class="project-lightbox" id="project-lightbox">
@@ -1774,15 +1704,25 @@
 
     </div>
 
-    <div class="lightbox-footer">
-      <span id="project-counter"></span>
+    <div class="project-caption">
+
+      <p
+        class="project-caption-title"
+        id="project-caption-title"
+      ></p>
+
+      <p
+        class="project-caption-detail"
+        id="project-caption-detail"
+      ></p>
+
     </div>
 
   </div>
 
 
   <!-- ======================================================
-       LIGHTBOX IMAGE / COULISSES / ARCHIVES
+       LIGHTBOX COULISSES / ARCHIVES
        ====================================================== -->
 
   <div class="image-lightbox" id="image-lightbox">
@@ -1826,7 +1766,7 @@
   <script>
 
     /* ======================================================
-       PROJETS PRINCIPAUX
+       GALERIES PROJETS
        ====================================================== */
 
     const projects = {
@@ -1834,29 +1774,32 @@
       bathroom: {
 
         title:
-          "Meubles de salle de bain · Frêne massif · Lancieux",
+          "Meubles de salle de bain · Lancieux",
+
+        detail:
+          "Frêne massif · Lancieux · Côtes-d'Armor",
 
         images: [
 
           {
             src:
               "images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_1.jpg",
-            alt:
+            caption:
               "Meuble vasque en frêne massif"
           },
 
           {
             src:
               "images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_2.jpg",
-            alt:
-              "Meuble vasque en frêne massif"
+            caption:
+              "Meuble suspendu en frêne massif"
           },
 
           {
             src:
               "images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_3.jpg",
-            alt:
-              "Meuble vasque en frêne massif"
+            caption:
+              "Ensemble de salle de bain en frêne massif"
           }
 
         ]
@@ -1869,40 +1812,43 @@
         title:
           "Bureaux & agencement sur mesure · Clamart",
 
+        detail:
+          "MDF peint & chêne · Clamart · Hauts-de-Seine",
+
         images: [
 
           {
             src:
               "images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_1.jpg",
-            alt:
-              "Aménagement sur mesure à Clamart"
+            caption:
+              "Vue générale de l'agencement"
           },
 
           {
             src:
               "images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_2.jpg",
-            alt:
-              "Bureau et rangements sur mesure à Clamart"
+            caption:
+              "Bureaux et rangements sur mesure"
           },
 
           {
             src:
               "images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_3.jpg",
-            alt:
-              "Agencement mural à Clamart"
+            caption:
+              "Agencement mural et espace de travail"
           },
 
           {
             src:
               "images/02_Bureaux_Clamart/Ensemble pièce.jpg",
-            alt:
+            caption:
               "Ensemble de la pièce aménagée"
           },
 
           {
             src:
               "images/02_Bureaux_Clamart/Meuble tiroirs et plateau imprimante.jpg",
-            alt:
+            caption:
               "Meuble à tiroirs et plateau pour imprimante"
           }
 
@@ -1914,29 +1860,46 @@
       doors: {
 
         title:
-          "Portes coulissantes · MDF peint & canage · Les Lilas",
+          "Portes coulissantes sur mesure · Les Lilas",
+
+        detail:
+          "MDF peint & canage naturel · Les Lilas",
 
         images: [
 
           {
             src:
-              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_1.jpg",
-            alt:
-              "Portes de placard coulissantes sur mesure"
+              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_1.jpg",
+            caption:
+              "Portes de placard coulissantes en canage"
           },
 
           {
             src:
-              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_2.jpg",
-            alt:
+              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_2.jpg",
+            caption:
               "Portes coulissantes en MDF peint et canage"
           },
 
           {
             src:
-              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_Les Lilas_3.jpg",
-            alt:
-              "Placard avec portes coulissantes sur mesure"
+              "images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_3.jpg",
+            caption:
+              "Ensemble installé aux Lilas"
+          },
+
+          {
+            src:
+              "images/03_Portes cannage_Les Lilas/Première vue.png",
+            caption:
+              "Première vue du projet"
+          },
+
+          {
+            src:
+              "images/03_Portes cannage_Les Lilas/Usinage en cour.png",
+            caption:
+              "Usinage en cours à l'atelier"
           }
 
         ]
@@ -1952,11 +1915,14 @@
     const projectImage =
       document.getElementById("project-image");
 
-    const projectCounter =
-      document.getElementById("project-counter");
-
     const projectTitle =
       document.getElementById("lightbox-title");
+
+    const projectCaptionTitle =
+      document.getElementById("project-caption-title");
+
+    const projectCaptionDetail =
+      document.getElementById("project-caption-detail");
 
     const projectClose =
       document.getElementById("project-close");
@@ -1984,13 +1950,16 @@
         current.src;
 
       projectImage.alt =
-        current.alt;
+        current.caption;
 
       projectTitle.textContent =
         project.title;
 
-      projectCounter.textContent =
-        `${currentProjectIndex + 1} / ${project.images.length}`;
+      projectCaptionTitle.textContent =
+        current.caption;
+
+      projectCaptionDetail.textContent =
+        project.detail;
 
     }
 
@@ -2006,6 +1975,7 @@
       updateProjectImage();
 
       projectLightbox.classList.add("visible");
+
       document.body.classList.add("no-scroll");
 
     }
@@ -2014,6 +1984,7 @@
     function closeProject() {
 
       projectLightbox.classList.remove("visible");
+
       document.body.classList.remove("no-scroll");
 
     }
@@ -2061,7 +2032,7 @@
 
             openProject(
               button.dataset.gallery,
-              Number(button.dataset.index)
+              Number(button.dataset.index || 0)
             );
 
           }
@@ -2086,9 +2057,7 @@
     );
 
 
-    /* ======================================================
-       SWIPE PROJETS
-       ====================================================== */
+    /* SWIPE */
 
     let touchStartX = 0;
 
@@ -2115,22 +2084,14 @@
         const difference =
           touchStartX - touchEndX;
 
-        if (
-          Math.abs(difference) < 50
-        ) {
+        if (Math.abs(difference) < 50) {
           return;
         }
 
-        if (
-          difference > 0
-        ) {
-
+        if (difference > 0) {
           nextProjectImage();
-
         } else {
-
           previousProjectImage();
-
         }
 
       },
@@ -2139,7 +2100,7 @@
 
 
     /* ======================================================
-       LIGHTBOX IMAGE GÉNÉRALE
+       LIGHTBOX GÉNÉRALE
        ====================================================== */
 
     const imageLightbox =
@@ -2160,7 +2121,6 @@
 
     function openImageLightbox(
       src,
-      alt,
       title,
       detail = ""
     ) {
@@ -2169,7 +2129,7 @@
         src;
 
       imageLightboxImg.alt =
-        alt;
+        title;
 
       imageCaptionTitle.textContent =
         title;
@@ -2177,26 +2137,18 @@
       imageCaptionDetail.textContent =
         detail;
 
-      imageLightbox.classList.add(
-        "visible"
-      );
+      imageLightbox.classList.add("visible");
 
-      document.body.classList.add(
-        "no-scroll"
-      );
+      document.body.classList.add("no-scroll");
 
     }
 
 
     function closeImageLightbox() {
 
-      imageLightbox.classList.remove(
-        "visible"
-      );
+      imageLightbox.classList.remove("visible");
 
-      document.body.classList.remove(
-        "no-scroll"
-      );
+      document.body.classList.remove("no-scroll");
 
     }
 
@@ -2211,12 +2163,8 @@
       "click",
       event => {
 
-        if (
-          event.target === imageLightbox
-        ) {
-
+        if (event.target === imageLightbox) {
           closeImageLightbox();
-
         }
 
       }
@@ -2225,6 +2173,7 @@
 
     /* ======================================================
        COULISSES
+       NOMS DE FICHIERS EXACTS
        ====================================================== */
 
     const galleryImages = [
@@ -2235,7 +2184,7 @@
       },
 
       {
-        src: "images/Coulisses/Bibliothèque sur mesure.png",
+        src: "images/Coulisses/Biblitothèque sur mesure.png",
         title: "Bibliothèque sur mesure"
       },
 
@@ -2265,27 +2214,27 @@
       },
 
       {
-        src: "images/Coulisses/Guéridon type Chapo en hêtre et inser en chêne.png",
-        title: "Guéridon en hêtre et insert en chêne"
+        src: "images/Coulisses/Guréidon type Chapo en hêtre et inser en chêne.png",
+        title: "Guéridon type Chapo en hêtre et insert en chêne"
       },
 
       {
-        src: "images/Coulisses/Guéridon type Chapo en hêtre et inser piste de dés.png",
-        title: "Guéridon en hêtre avec insert piste de dés"
+        src: "images/Coulisses/Guréidon type Chapo en hêtre et inser piste de dés.png",
+        title: "Guéridon type Chapo en hêtre avec insert piste de dés"
       },
 
       {
         src: "images/Coulisses/Habillage armoire IKEA fermé.png",
-        title: "Habillage d'armoire"
+        title: "Habillage d'armoire IKEA fermé"
       },
 
       {
         src: "images/Coulisses/Habillage armoire IKEA ouvert.png",
-        title: "Habillage d'armoire ouvert"
+        title: "Habillage d'armoire IKEA ouvert"
       },
 
       {
-        src: "images/Coulisses/Logo TXIPA.jpg",
+        src: "images/Coulisses/Logo TXIPA.png",
         title: "Txipa Ébénisterie"
       },
 
@@ -2351,56 +2300,51 @@
       document.getElementById("gallery-grid");
 
 
-    galleryImages.forEach(
-      imageData => {
+    galleryImages.forEach(imageData => {
 
-        const button =
-          document.createElement("button");
+      const button =
+        document.createElement("button");
 
-        button.type =
-          "button";
+      button.type =
+        "button";
 
-        button.className =
-          "gallery-item reveal";
-
-
-        const image =
-          document.createElement("img");
-
-        image.src =
-          imageData.src;
-
-        image.alt =
-          imageData.title;
-
-        image.loading =
-          "lazy";
+      button.className =
+        "gallery-item reveal";
 
 
-        button.appendChild(image);
+      const image =
+        document.createElement("img");
+
+      image.src =
+        imageData.src;
+
+      image.alt =
+        imageData.title;
+
+      image.loading =
+        "lazy";
 
 
-        button.addEventListener(
-          "click",
-          () => {
-
-            openImageLightbox(
-              imageData.src,
-              imageData.title,
-              imageData.title,
-              "Txipa Ébénisterie"
-            );
-
-          }
-        );
+      button.appendChild(image);
 
 
-        galleryGrid.appendChild(
-          button
-        );
+      button.addEventListener(
+        "click",
+        () => {
 
-      }
-    );
+          openImageLightbox(
+            imageData.src,
+            imageData.title,
+            "Txipa Ébénisterie"
+          );
+
+        }
+      );
+
+
+      galleryGrid.appendChild(button);
+
+    });
 
 
     /* ======================================================
@@ -2413,9 +2357,6 @@
 
         src:
           "images/Projets_archives/Aménagement_placard_Vincennes/Aménagement global.png",
-
-        alt:
-          "Aménagement de placard sur mesure à Vincennes",
 
         title:
           "Aménagement de placard",
@@ -2431,9 +2372,6 @@
         src:
           "images/Projets_archives/Restauration_Volet_Paris17/Volets repeint.png",
 
-        alt:
-          "Restauration de volets à Paris 17e",
-
         title:
           "Restauration de volets",
 
@@ -2447,30 +2385,25 @@
 
     document
       .querySelectorAll("[data-archive]")
-      .forEach(
-        card => {
+      .forEach(card => {
 
-          card.addEventListener(
-            "click",
-            () => {
+        card.addEventListener(
+          "click",
+          () => {
 
-              const archive =
-                archives[
-                  card.dataset.archive
-                ];
+            const archive =
+              archives[card.dataset.archive];
 
-              openImageLightbox(
-                archive.src,
-                archive.alt,
-                archive.title,
-                archive.detail
-              );
+            openImageLightbox(
+              archive.src,
+              archive.title,
+              archive.detail
+            );
 
-            }
-          );
+          }
+        );
 
-        }
-      );
+      });
 
 
     /* ======================================================
@@ -2487,21 +2420,15 @@
             .contains("visible")
         ) {
 
-          if (
-            event.key === "Escape"
-          ) {
+          if (event.key === "Escape") {
             closeProject();
           }
 
-          if (
-            event.key === "ArrowRight"
-          ) {
+          if (event.key === "ArrowRight") {
             nextProjectImage();
           }
 
-          if (
-            event.key === "ArrowLeft"
-          ) {
+          if (event.key === "ArrowLeft") {
             previousProjectImage();
           }
 
@@ -2536,21 +2463,15 @@
       ).matches;
 
 
-    if (
-      reducedMotion
-    ) {
+    if (reducedMotion) {
 
       document
         .querySelectorAll(".reveal")
-        .forEach(
-          element => {
+        .forEach(element => {
 
-            element.classList.add(
-              "visible"
-            );
+          element.classList.add("visible");
 
-          }
-        );
+        });
 
     } else {
 
@@ -2559,25 +2480,21 @@
 
           entries => {
 
-            entries.forEach(
-              entry => {
+            entries.forEach(entry => {
 
-                if (
-                  entry.isIntersecting
-                ) {
+              if (entry.isIntersecting) {
 
+                entry.target
+                  .classList
+                  .add("visible");
+
+                observer.unobserve(
                   entry.target
-                    .classList
-                    .add("visible");
-
-                  observer.unobserve(
-                    entry.target
-                  );
-
-                }
+                );
 
               }
-            );
+
+            });
 
           },
 
@@ -2590,20 +2507,15 @@
 
       document
         .querySelectorAll(".reveal")
-        .forEach(
-          element => {
+        .forEach(element => {
 
-            observer.observe(
-              element
-            );
+          observer.observe(element);
 
-          }
-        );
+        });
 
     }
 
   </script>
 
 </body>
-
 </html>
