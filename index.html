@@ -16,17 +16,14 @@
   <meta name="theme-color" content="#00201E">
 
   <meta property="og:title" content="Txipa Ébénisterie – meubles et agencements sur mesure">
-
   <meta
     property="og:description"
     content="Conception et fabrication artisanale de meubles et agencements sur mesure. Atelier à Montreuil."
   >
-
   <meta
     property="og:image"
     content="https://txipa-ebenisterie.com/images/20260926_165205.jpg"
   >
-
   <meta property="og:url" content="https://txipa-ebenisterie.com">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
@@ -76,6 +73,7 @@
       --cream-soft: #f0ede8;
       --muted: #c9c5be;
       --line: rgba(245, 245, 245, 0.14);
+      --green-line: rgba(0, 32, 30, 0.16);
       --max-width: 1250px;
     }
 
@@ -173,11 +171,6 @@
       color: var(--cream);
     }
 
-
-    /* ======================================================
-       INVITATION ATELIER
-       ====================================================== */
-
     .workshop-invite-wrapper {
       display: flex;
       justify-content: center;
@@ -199,7 +192,6 @@
     }
 
     .workshop-invite strong {
-      display: inline;
       color: var(--cream);
       font-weight: 600;
     }
@@ -367,21 +359,35 @@
 
 
     /* ======================================================
-       DU PROJET À LA POSE
+       V2.7 - BANDE CLAIRE : DU PROJET À LA POSE
        ====================================================== */
 
+    .process-band {
+      width: 100%;
+      margin-top: 90px;
+      background: var(--cream-soft);
+      color: var(--green);
+    }
+
     .process-section {
-      border-top: 1px solid var(--line);
+      width: min(calc(100% - 48px), var(--max-width));
+      margin: 0 auto;
+      padding: 100px 0;
       text-align: center;
     }
 
     .process-heading {
       max-width: 720px;
-      margin: 0 auto 55px;
+      margin: 0 auto 60px;
+    }
+
+    .process-heading .eyebrow {
+      color: rgba(0, 32, 30, 0.62);
     }
 
     .process-heading h2 {
       margin: 0;
+      color: var(--green);
       font-size: clamp(1.7rem, 3vw, 2.4rem);
       font-weight: 400;
     }
@@ -389,7 +395,7 @@
     .process-heading p {
       max-width: 640px;
       margin: 20px auto 0;
-      color: var(--cream-soft);
+      color: rgba(0, 32, 30, 0.78);
       line-height: 1.8;
     }
 
@@ -406,26 +412,27 @@
     }
 
     .process-step + .process-step {
-      border-left: 1px solid var(--line);
+      border-left: 1px solid var(--green-line);
     }
 
     .process-number {
       display: block;
       margin-bottom: 16px;
-      color: var(--muted);
+      color: rgba(0, 32, 30, 0.48);
       font-size: 0.7rem;
       letter-spacing: 0.14em;
     }
 
     .process-step h3 {
       margin: 0 0 15px;
+      color: var(--green);
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     .process-step p {
       margin: 0;
-      color: var(--cream-soft);
+      color: rgba(0, 32, 30, 0.78);
       font-size: 0.84rem;
       line-height: 1.75;
     }
@@ -436,7 +443,8 @@
        ====================================================== */
 
     .gallery-section {
-      border-top: 1px solid var(--line);
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
 
     .gallery-heading {
@@ -492,14 +500,15 @@
 
 
     /* ======================================================
-       CONTACT
+       V2.7 - CONTACT SUR FOND CLAIR
        ====================================================== */
 
     .contact {
       width: 100%;
-      margin-top: 30px;
-      padding: 100px 25px;
-      border-top: 1px solid var(--line);
+      margin: 0;
+      padding: 105px 25px;
+      background: var(--cream-soft);
+      color: var(--green);
       text-align: center;
     }
 
@@ -508,8 +517,13 @@
       margin: 0 auto;
     }
 
+    .contact .eyebrow {
+      color: rgba(0, 32, 30, 0.62);
+    }
+
     .contact h2 {
       margin: 0;
+      color: var(--green);
       font-size: clamp(1.8rem, 4vw, 3.4rem);
       font-weight: 400;
     }
@@ -517,13 +531,14 @@
     .contact p {
       max-width: 590px;
       margin: 22px auto 32px;
-      color: var(--cream-soft);
+      color: rgba(0, 32, 30, 0.78);
     }
 
     .contact-button {
       display: inline-block;
       padding: 14px 22px;
-      border: 1px solid rgba(245, 245, 245, 0.5);
+      border: 1px solid rgba(0, 32, 30, 0.55);
+      color: var(--green);
       font-size: 0.8rem;
       font-weight: 400;
       transition:
@@ -532,8 +547,8 @@
     }
 
     .contact-button:hover {
-      background: var(--cream);
-      color: var(--green);
+      background: var(--green);
+      color: var(--cream-soft);
     }
 
 
@@ -544,8 +559,7 @@
     footer {
       max-width: 900px;
       margin: 0 auto;
-      padding: 55px 25px;
-      border-top: 1px solid var(--line);
+      padding: 60px 25px;
       text-align: center;
       color: var(--cream-soft);
       font-size: 0.85rem;
@@ -707,7 +721,7 @@
 
 
     /* ======================================================
-       LIGHTBOX GALERIE
+       V2.7 - LIGHTBOX GALERIE + LÉGENDE
        ====================================================== */
 
     .image-lightbox {
@@ -715,9 +729,10 @@
       inset: 0;
       z-index: 1100;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 70px;
+      padding: 70px 70px 35px;
       background: rgba(0, 16, 15, 0.98);
       opacity: 0;
       visibility: hidden;
@@ -733,10 +748,42 @@
       pointer-events: auto;
     }
 
-    .image-lightbox img {
+    .image-lightbox-visual {
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-lightbox-visual img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
+    }
+
+    .image-caption {
+      width: min(100%, 700px);
+      min-height: 80px;
+      padding: 20px 10px 0;
+      text-align: center;
+    }
+
+    .image-caption-title {
+      margin: 0;
+      color: var(--cream);
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .image-caption-detail {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
     }
 
     .image-close {
@@ -860,6 +907,15 @@
         scroll-snap-align: center;
       }
 
+      .process-band {
+        margin-top: 65px;
+      }
+
+      .process-section {
+        width: calc(100% - 30px);
+        padding: 75px 0;
+      }
+
       .process-grid {
         grid-template-columns: 1fr;
         max-width: 430px;
@@ -871,7 +927,7 @@
 
       .process-step + .process-step {
         border-left: 0;
-        border-top: 1px solid var(--line);
+        border-top: 1px solid var(--green-line);
       }
 
       .gallery-grid {
@@ -903,6 +959,11 @@
 
       .image-lightbox {
         padding: 65px 15px 20px;
+      }
+
+      .image-caption {
+        min-height: 95px;
+        padding-top: 18px;
       }
 
     }
@@ -953,7 +1014,6 @@
 
   <main>
 
-
     <!-- ====================================================
          PRÉSENTATION
          ==================================================== -->
@@ -998,9 +1058,6 @@
         les réalisations prennent forme dans mon
         <strong>atelier à Montreuil</strong>.
       </p>
-
-
-      <!-- Invitation atelier : conteneur dédié pour garantir le centrage -->
 
       <div class="workshop-invite-wrapper">
 
@@ -1247,86 +1304,90 @@
 
 
     <!-- ====================================================
-         PROCESSUS
+         V2.7 - BANDE CLAIRE / PROCESSUS
          ==================================================== -->
 
-    <section class="section process-section">
+    <div class="process-band">
 
-      <div class="process-heading reveal">
+      <section class="process-section">
 
-        <span class="eyebrow">
-          Le sur-mesure
-        </span>
+        <div class="process-heading reveal">
 
-        <h2>
-          Du projet à la pose
-        </h2>
+          <span class="eyebrow">
+            Le sur-mesure
+          </span>
 
-        <p>
-          Chaque réalisation est développée en fonction du lieu,
-          des usages et des envies, puis fabriquée à l’atelier
-          à Montreuil.
-        </p>
-
-      </div>
-
-
-      <div class="process-grid">
-
-        <div class="process-step reveal">
-
-          <span class="process-number">01</span>
-
-          <h3>Échange & conception</h3>
+          <h2>
+            Du projet à la pose
+          </h2>
 
           <p>
-            Comprendre le besoin, prendre les mesures et définir
-            les formes, matériaux et finitions. Les échanges
-            peuvent se poursuivre à l’atelier pour découvrir les
-            matières et affiner les choix.
+            Chaque réalisation est développée en fonction du lieu,
+            des usages et des envies, puis fabriquée à l’atelier
+            à Montreuil.
           </p>
 
         </div>
 
 
-        <div class="process-step reveal">
+        <div class="process-grid">
 
-          <span class="process-number">02</span>
+          <div class="process-step reveal">
 
-          <h3>Fabrication à l'atelier</h3>
+            <span class="process-number">01</span>
 
-          <p>
-            Débit, assemblage, ajustage et finition : chaque
-            élément est préparé avec soin à Montreuil. Lorsque
-            l’ampleur ou la technicité d’un projet le demande,
-            je peux m’entourer d’artisans aux savoir-faire
-            complémentaires.
-          </p>
+            <h3>Échange & conception</h3>
+
+            <p>
+              Comprendre le besoin, prendre les mesures et définir
+              les formes, matériaux et finitions. Les échanges
+              peuvent se poursuivre à l’atelier pour découvrir les
+              matières et affiner les choix.
+            </p>
+
+          </div>
+
+
+          <div class="process-step reveal">
+
+            <span class="process-number">02</span>
+
+            <h3>Fabrication à l'atelier</h3>
+
+            <p>
+              Débit, assemblage, ajustage et finition : chaque
+              élément est préparé avec soin à Montreuil. Lorsque
+              l’ampleur ou la technicité d’un projet le demande,
+              je peux m’entourer d’artisans aux savoir-faire
+              complémentaires.
+            </p>
+
+          </div>
+
+
+          <div class="process-step reveal">
+
+            <span class="process-number">03</span>
+
+            <h3>Livraison & pose</h3>
+
+            <p>
+              Le mobilier est livré, installé et ajusté sur place
+              pour s’intégrer précisément à son environnement et
+              assurer une finition soignée jusqu’au dernier détail.
+            </p>
+
+          </div>
 
         </div>
 
+      </section>
 
-        <div class="process-step reveal">
-
-          <span class="process-number">03</span>
-
-          <h3>Livraison & pose</h3>
-
-          <p>
-            Le mobilier est livré, installé et ajusté sur place
-            pour s’intégrer précisément à son environnement et
-            assurer une finition soignée jusqu’au dernier détail.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
+    </div>
 
 
     <!-- ====================================================
-         GALERIE
+         COULISSES & AUTRES RÉALISATIONS
          ==================================================== -->
 
     <section class="section gallery-section">
@@ -1340,6 +1401,7 @@
         <p>
           Fabrication à l’atelier, détails, matières, gabarits
           et quelques pièces réalisées au fil des projets.
+          Cliquez sur une image pour la découvrir en détail.
         </p>
 
       </div>
@@ -1350,7 +1412,7 @@
 
 
     <!-- ====================================================
-         CONTACT
+         V2.7 - CONTACT SUR FOND CLAIR
          ==================================================== -->
 
     <section class="contact">
@@ -1435,7 +1497,7 @@
     </p>
 
     <p class="footer-version">
-      V2.6.1
+      V2.7
     </p>
 
   </footer>
@@ -1479,7 +1541,7 @@
 
 
   <!-- ======================================================
-       LIGHTBOX GALERIE
+       V2.7 - LIGHTBOX GALERIE AVEC LÉGENDE
        ====================================================== -->
 
   <div class="image-lightbox" id="image-lightbox">
@@ -1488,7 +1550,23 @@
       ×
     </button>
 
-    <img id="image-lightbox-img" src="" alt="Réalisation Txipa Ébénisterie">
+    <div class="image-lightbox-visual">
+      <img id="image-lightbox-img" src="" alt="">
+    </div>
+
+    <div class="image-caption">
+
+      <p
+        class="image-caption-title"
+        id="image-caption-title"
+      ></p>
+
+      <p
+        class="image-caption-detail"
+        id="image-caption-detail"
+      ></p>
+
+    </div>
 
   </div>
 
@@ -1594,20 +1672,12 @@
 
     function updateProjectImage() {
 
-      const project =
-        projects[currentGallery];
+      const project = projects[currentGallery];
+      const current = project.images[currentProjectIndex];
 
-      const current =
-        project.images[currentProjectIndex];
-
-      projectImage.src =
-        current.src;
-
-      projectImage.alt =
-        current.alt;
-
-      projectTitle.textContent =
-        project.title;
+      projectImage.src = current.src;
+      projectImage.alt = current.alt;
+      projectTitle.textContent = project.title;
 
       projectCounter.textContent =
         `${currentProjectIndex + 1} / ${project.images.length}`;
@@ -1617,11 +1687,8 @@
 
     function openProject(gallery, index = 0) {
 
-      currentGallery =
-        gallery;
-
-      currentProjectIndex =
-        index;
+      currentGallery = gallery;
+      currentProjectIndex = index;
 
       updateProjectImage();
 
@@ -1641,8 +1708,7 @@
 
     function nextProjectImage() {
 
-      const project =
-        projects[currentGallery];
+      const project = projects[currentGallery];
 
       currentProjectIndex =
         (currentProjectIndex + 1) % project.images.length;
@@ -1654,8 +1720,7 @@
 
     function previousProjectImage() {
 
-      const project =
-        projects[currentGallery];
+      const project = projects[currentGallery];
 
       currentProjectIndex =
         (
@@ -1691,7 +1756,7 @@
 
 
     /* ======================================================
-       SWIPE MOBILE
+       SWIPE MOBILE PROJETS
        ====================================================== */
 
     let touchStartX = 0;
@@ -1735,40 +1800,217 @@
 
 
     /* ======================================================
-       GALERIE
+       GALERIE + LÉGENDES
        ====================================================== */
+
+    /*
+      Pour les images dont le contenu est certain, les légendes
+      sont déjà renseignées.
+
+      Pour les fichiers 1.png, 2.png, etc., je laisse volontairement
+      une légende neutre pour ne pas inventer le contenu des photos.
+
+      Il suffira ensuite de modifier "title" et "detail".
+    */
 
     const galleryImages = [
 
-      { src: "images/20250424_185044.jpg", alt: "Échiquier artisanal en bois massif" },
-      { src: "images/20250603_123045.jpg", alt: "Piste de dés en bois massif réalisée à l'atelier" },
-      { src: "images/20250404_172807.jpg", alt: "Échiquier artisanal en chêne et frêne" },
-      { src: "images/20250317_124347.jpg", alt: "Support pour vinyles en hêtre massif" },
-      { src: "images/IMG-20250414-WA0029.jpeg", alt: "Planche à découper artisanale en bois" },
+      {
+        src: "images/20250424_185044.jpg",
+        alt: "Échiquier artisanal en bois massif",
+        title: "Échiquier artisanal",
+        detail: "Fabrication en bois massif"
+      },
 
-      { src: "images/1.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/2.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/3.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/4.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/6.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/7.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/8.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/9.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/10.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/11.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/12.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/13.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/14.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/15.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/16.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/17.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/18.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/19.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/20.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/21.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/22.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/24.png", alt: "Réalisation Txipa Ébénisterie" },
-      { src: "images/25.png", alt: "Réalisation Txipa Ébénisterie" }
+      {
+        src: "images/20250603_123045.jpg",
+        alt: "Piste de dés en bois massif réalisée à l'atelier",
+        title: "Piste de dés",
+        detail: "Fabrication artisanale en bois massif"
+      },
+
+      {
+        src: "images/20250404_172807.jpg",
+        alt: "Échiquier artisanal en chêne et frêne",
+        title: "Échiquier en chêne et frêne",
+        detail: "Fabrication artisanale"
+      },
+
+      {
+        src: "images/20250317_124347.jpg",
+        alt: "Support pour vinyles en hêtre massif",
+        title: "Support pour vinyles",
+        detail: "Hêtre massif"
+      },
+
+      {
+        src: "images/IMG-20250414-WA0029.jpeg",
+        alt: "Planche à découper artisanale en bois",
+        title: "Planche à découper",
+        detail: "Fabrication artisanale en bois"
+      },
+
+
+      {
+        src: "images/1.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/2.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/3.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/4.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/6.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/7.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/8.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/9.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/10.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/11.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/12.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/13.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/14.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/15.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/16.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/17.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/18.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/19.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/20.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/21.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/22.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/24.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      },
+
+      {
+        src: "images/25.png",
+        alt: "Réalisation Txipa Ébénisterie",
+        title: "À l'atelier",
+        detail: "Fabrication & détails"
+      }
 
     ];
 
@@ -1782,6 +2024,12 @@
     const imageLightboxImg =
       document.getElementById("image-lightbox-img");
 
+    const imageCaptionTitle =
+      document.getElementById("image-caption-title");
+
+    const imageCaptionDetail =
+      document.getElementById("image-caption-detail");
+
     const imageClose =
       document.getElementById("image-close");
 
@@ -1791,24 +2039,16 @@
       const button =
         document.createElement("button");
 
-      button.type =
-        "button";
-
-      button.className =
-        "gallery-item reveal";
+      button.type = "button";
+      button.className = "gallery-item reveal";
 
 
       const image =
         document.createElement("img");
 
-      image.src =
-        imageData.src;
-
-      image.alt =
-        imageData.alt;
-
-      image.loading =
-        "lazy";
+      image.src = imageData.src;
+      image.alt = imageData.alt;
+      image.loading = "lazy";
 
 
       button.appendChild(image);
@@ -1821,6 +2061,12 @@
 
         imageLightboxImg.alt =
           imageData.alt;
+
+        imageCaptionTitle.textContent =
+          imageData.title;
+
+        imageCaptionDetail.textContent =
+          imageData.detail;
 
         imageLightbox.classList.add("visible");
         document.body.classList.add("no-scroll");
