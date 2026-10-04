@@ -2287,7 +2287,7 @@ function openProjectOverview(projectKey) {
   "";
 
 
-  project.images.forEach((image,index) => {
+  project.images.slice(3).forEach((image,index) => {
 
 
     const button =
@@ -2325,9 +2325,9 @@ function openProjectOverview(projectKey) {
 
 
       openPhotoViewer(
-        projectKey,
-        index
-      );
+      projectKey,
+      index + 3
+    );
 
 
     });
