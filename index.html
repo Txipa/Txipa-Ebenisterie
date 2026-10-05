@@ -109,9 +109,7 @@ a {
 }
 
 
-/* ==========================================================
-   HEADER
-   ========================================================== */
+/* HEADER */
 
 header {
   text-align:center;
@@ -137,9 +135,7 @@ header p {
 }
 
 
-/* ==========================================================
-   PRESENTATION
-   ========================================================== */
+/* PRESENTATION */
 
 .presentation {
   width:min(calc(100% - 40px),820px);
@@ -187,9 +183,7 @@ header p {
 }
 
 
-/* ==========================================================
-   SECTIONS
-   ========================================================== */
+/* SECTIONS */
 
 .section {
   width:min(calc(100% - 48px),var(--max-width));
@@ -208,9 +202,7 @@ header p {
 }
 
 
-/* ==========================================================
-   PROJETS
-   ========================================================== */
+/* PROJETS */
 
 .featured-projects {
   border-top:1px solid var(--line);
@@ -277,9 +269,7 @@ header p {
 }
 
 
-/* ==========================================================
-   PHOTOS PRINCIPALES — FORMAT TXIPA 3:4
-   ========================================================== */
+/* PHOTOS ACCUEIL — FORMAT 3:4 */
 
 .project-photos {
   display:flex;
@@ -306,9 +296,7 @@ header p {
   height:100%;
   object-fit:cover;
   object-position:center;
-  transition:
-    transform .45s ease,
-    opacity .45s ease;
+  transition:transform .45s ease,opacity .45s ease;
 }
 
 .project-photo:hover img {
@@ -342,9 +330,7 @@ header p {
 }
 
 
-/* ==========================================================
-   PROCESS
-   ========================================================== */
+/* PROCESS */
 
 .process-band {
   width:100%;
@@ -422,9 +408,7 @@ header p {
 }
 
 
-/* ==========================================================
-   COULISSES
-   ========================================================== */
+/* COULISSES */
 
 .gallery-section {
   padding-top:100px;
@@ -480,9 +464,7 @@ header p {
 }
 
 
-/* ==========================================================
-   ARCHIVES
-   ========================================================== */
+/* ARCHIVES */
 
 .archives-section {
   border-top:1px solid var(--line);
@@ -555,9 +537,7 @@ header p {
 }
 
 
-/* ==========================================================
-   CONTACT
-   ========================================================== */
+/* CONTACT */
 
 .contact {
   padding:105px 25px;
@@ -589,9 +569,7 @@ header p {
 }
 
 
-/* ==========================================================
-   FOOTER
-   ========================================================== */
+/* FOOTER */
 
 footer {
   max-width:900px;
@@ -621,9 +599,7 @@ footer {
 }
 
 
-/* ==========================================================
-   POPUP PROJET
-   ========================================================== */
+/* POPUP PROJET */
 
 .project-modal {
   position:fixed;
@@ -635,14 +611,10 @@ footer {
   padding:30px;
   background:rgba(0,12,11,.82);
   backdrop-filter:blur(5px);
-
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-
-  transition:
-    opacity .3s ease,
-    visibility .3s ease;
+  transition:opacity .3s ease,visibility .3s ease;
 }
 
 .project-modal.visible {
@@ -700,9 +672,6 @@ footer {
   padding:20px;
 }
 
-
-/* GALERIE PROJET 3:4 */
-
 .project-overview {
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -725,9 +694,7 @@ footer {
   object-fit:cover;
   object-position:center;
   display:block;
-  transition:
-    transform .35s ease,
-    opacity .35s ease;
+  transition:transform .35s ease,opacity .35s ease;
 }
 
 .project-overview-item:hover img {
@@ -736,9 +703,7 @@ footer {
 }
 
 
-/* ==========================================================
-   PHOTO PROJET AGRANDIE
-   ========================================================== */
+/* PHOTO AGRANDIE */
 
 .photo-viewer {
   position:fixed;
@@ -747,14 +712,10 @@ footer {
   display:flex;
   flex-direction:column;
   background:rgba(0,15,14,.985);
-
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-
-  transition:
-    opacity .25s ease,
-    visibility .25s ease;
+  transition:opacity .25s ease,visibility .25s ease;
 }
 
 .photo-viewer.visible {
@@ -846,9 +807,7 @@ footer {
 }
 
 
-/* ==========================================================
-   LIGHTBOX COULISSES / ARCHIVES
-   ========================================================== */
+/* LIGHTBOX SIMPLE */
 
 .image-lightbox {
   position:fixed;
@@ -860,7 +819,6 @@ footer {
   justify-content:center;
   padding:70px 70px 35px;
   background:rgba(0,16,15,.98);
-
   opacity:0;
   visibility:hidden;
   pointer-events:none;
@@ -905,16 +863,12 @@ footer {
 }
 
 
-/* ==========================================================
-   REVEAL
-   ========================================================== */
+/* REVEAL */
 
 .reveal {
   opacity:0;
   transform:translateY(15px);
-  transition:
-    opacity .7s ease,
-    transform .7s ease;
+  transition:opacity .7s ease,transform .7s ease;
 }
 
 .reveal.visible {
@@ -923,9 +877,7 @@ footer {
 }
 
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
+/* RESPONSIVE */
 
 @media(max-width:900px) {
 
@@ -938,7 +890,6 @@ footer {
   }
 
 }
-
 
 @media(max-width:650px) {
 
@@ -965,9 +916,6 @@ footer {
     padding-top:70px;
   }
 
-
-  /* PHOTOS PROJET MOBILE */
-
   .project-photos {
     justify-content:flex-start;
     overflow-x:auto;
@@ -988,9 +936,6 @@ footer {
     scroll-snap-align:center;
   }
 
-
-  /* PROCESS */
-
   .process-grid {
     grid-template-columns:1fr;
   }
@@ -1000,23 +945,14 @@ footer {
     border-top:1px solid var(--green-line);
   }
 
-
-  /* COULISSES */
-
   .gallery-grid {
     grid-template-columns:repeat(2,1fr);
     gap:7px;
   }
 
-
-  /* ARCHIVES */
-
   .archives-grid {
     grid-template-columns:1fr;
   }
-
-
-  /* POPUP PROJET */
 
   .project-modal {
     padding:0;
@@ -1047,9 +983,6 @@ footer {
     gap:7px;
   }
 
-
-  /* PHOTO AGRANDIE */
-
   .photo-viewer-stage {
     padding:10px 10px 65px;
   }
@@ -1074,7 +1007,6 @@ footer {
 
 }
 
-
 @media(prefers-reduced-motion:reduce) {
 
   html {
@@ -1096,10 +1028,6 @@ footer {
 <body>
 
 
-<!-- ========================================================
-     HEADER
-     ======================================================== -->
-
 <header>
 
   <img src="file_000000005184622fa6f049d633c3f97e.png"
@@ -1117,15 +1045,9 @@ footer {
 <main>
 
 
-<!-- ========================================================
-     PRESENTATION
-     ======================================================== -->
-
 <section class="presentation">
 
-  <h2>
-    Atelier d’ébénisterie et d’agencement sur mesure
-  </h2>
+  <h2>Atelier d’ébénisterie et d’agencement sur mesure</h2>
 
   <p>
     <strong>Txipa Ébénisterie</strong> conçoit et réalise des
@@ -1167,9 +1089,7 @@ footer {
     <p class="workshop-invite">
       Vous souhaitez découvrir l’atelier, voir les matériaux ou
       simplement échanger autour de votre projet ?
-      <strong>
-        Je vous y accueille volontiers sur rendez-vous.
-      </strong>
+      <strong>Je vous y accueille volontiers sur rendez-vous.</strong>
     </p>
 
   </div>
@@ -1177,32 +1097,20 @@ footer {
 </section>
 
 
-<!-- ========================================================
-     PROJETS
-     ======================================================== -->
-
 <section class="section featured-projects">
-
 
 <div class="projects-heading reveal">
 
-  <span class="eyebrow">
-    Derniers projets
-  </span>
+  <span class="eyebrow">Derniers projets</span>
 
-  <h2>
-    Réalisations récentes
-  </h2>
+  <h2>Réalisations récentes</h2>
 
 </div>
 
 
-<!-- ========================================================
-     PROJET 1 — LANCIEUX
-     ======================================================== -->
+<!-- LANCIEUX -->
 
 <article class="project">
-
 
 <div class="project-intro reveal">
 
@@ -1220,13 +1128,11 @@ footer {
   </p>
 
   <div class="project-meta">
-
     <span>Frêne massif</span>
     <span>Rubio Monocoat</span>
     <span>Tiroirs LMC</span>
     <span>Coulisses Blum</span>
     <span>2026</span>
-
   </div>
 
   <div class="project-location">
@@ -1247,7 +1153,6 @@ footer {
 
   </button>
 
-
   <button class="project-photo"
           data-photo-project="bathroom"
           data-photo-index="1">
@@ -1256,7 +1161,6 @@ footer {
          alt="Meuble suspendu en frêne massif">
 
   </button>
-
 
   <button class="project-photo"
           data-photo-project="bathroom"
@@ -1269,25 +1173,18 @@ footer {
 
 </div>
 
-
 <button class="view-project"
         data-open-project="bathroom">
-
   Découvrir le projet
   <span>→</span>
-
 </button>
-
 
 </article>
 
 
-<!-- ========================================================
-     PROJET 2 — CLAMART
-     ======================================================== -->
+<!-- CLAMART -->
 
 <article class="project">
-
 
 <div class="project-intro reveal">
 
@@ -1297,32 +1194,23 @@ footer {
   </h3>
 
   <p class="project-description">
-
     Ensemble sur mesure réunissant deux bureaux, un agencement mural
     et des portes de placard, associant MDF peint et panneaux plaqués
-    chêne.
-
-    Les rangements intègrent des
+    chêne. Les rangements intègrent des
     <strong>tiroirs fabriqués à l’atelier</strong>,
     montés sur coulisses Blum, ainsi que des charnières Blum.
-
     Les éléments peints reçoivent une finition
     <strong>Horus de Guittet</strong>.
-
   </p>
 
-
   <div class="project-meta">
-
     <span>MDF peint</span>
     <span>Panneaux plaqués chêne</span>
     <span>Horus · Guittet</span>
     <span>Tiroirs artisanaux</span>
     <span>Quincaillerie Blum</span>
     <span>2026</span>
-
   </div>
-
 
   <div class="project-location">
     Clamart · Hauts-de-Seine
@@ -1342,7 +1230,6 @@ footer {
 
   </button>
 
-
   <button class="project-photo"
           data-photo-project="office"
           data-photo-index="1">
@@ -1351,7 +1238,6 @@ footer {
          alt="Bureau et rangements sur mesure">
 
   </button>
-
 
   <button class="project-photo"
           data-photo-project="office"
@@ -1364,25 +1250,18 @@ footer {
 
 </div>
 
-
 <button class="view-project"
         data-open-project="office">
-
   Découvrir le projet
   <span>→</span>
-
 </button>
-
 
 </article>
 
 
-<!-- ========================================================
-     PROJET 3 — LES LILAS
-     ======================================================== -->
+<!-- LES LILAS -->
 
 <article class="project">
-
 
 <div class="project-intro reveal">
 
@@ -1391,32 +1270,23 @@ footer {
     sur mesure
   </h3>
 
-
   <p class="project-description">
-
     Portes de placard coulissantes conçues et fabriquées sur mesure
     en MDF peint, associées à un canage naturel des
     <strong>Rotins Nîmois</strong>.
-
     Le dessin cintré apporte légèreté et rythme à l’ensemble
     tout en laissant respirer le canage.
-
     Les éléments peints reçoivent une finition
     <strong>Horus de Guittet</strong>.
-
   </p>
 
-
   <div class="project-meta">
-
     <span>MDF peint</span>
     <span>Horus · Guittet</span>
     <span>Canage naturel</span>
     <span>Rotins Nîmois</span>
     <span>2026</span>
-
   </div>
-
 
   <div class="project-location">
     Les Lilas · Seine-Saint-Denis
@@ -1436,7 +1306,6 @@ footer {
 
   </button>
 
-
   <button class="project-photo"
           data-photo-project="doors"
           data-photo-index="1">
@@ -1445,7 +1314,6 @@ footer {
          alt="Portes coulissantes en MDF peint et canage">
 
   </button>
-
 
   <button class="project-photo"
           data-photo-project="doors"
@@ -1458,40 +1326,28 @@ footer {
 
 </div>
 
-
 <button class="view-project"
         data-open-project="doors">
-
   Découvrir le projet
   <span>→</span>
-
 </button>
 
-
 </article>
-
 
 </section>
 
 
-<!-- ========================================================
-     PROCESS
-     ======================================================== -->
+<!-- PROCESS -->
 
 <div class="process-band">
 
 <section class="process-section">
 
-
 <div class="process-heading reveal">
 
-  <span class="eyebrow">
-    Le sur-mesure
-  </span>
+  <span class="eyebrow">Le sur-mesure</span>
 
-  <h2>
-    Du projet à la pose
-  </h2>
+  <h2>Du projet à la pose</h2>
 
   <p>
     Chaque réalisation est développée en fonction du lieu,
@@ -1503,16 +1359,11 @@ footer {
 
 <div class="process-grid">
 
-
 <div class="process-step reveal">
 
-  <span class="process-number">
-    01
-  </span>
+  <span class="process-number">01</span>
 
-  <h3>
-    Échange & conception
-  </h3>
+  <h3>Échange & conception</h3>
 
   <p>
     Comprendre le besoin, prendre les mesures et définir les formes,
@@ -1525,13 +1376,9 @@ footer {
 
 <div class="process-step reveal">
 
-  <span class="process-number">
-    02
-  </span>
+  <span class="process-number">02</span>
 
-  <h3>
-    Fabrication à l'atelier
-  </h3>
+  <h3>Fabrication à l'atelier</h3>
 
   <p>
     Débit, assemblage, ajustage et finition : chaque élément est
@@ -1545,13 +1392,9 @@ footer {
 
 <div class="process-step reveal">
 
-  <span class="process-number">
-    03
-  </span>
+  <span class="process-number">03</span>
 
-  <h3>
-    Livraison & pose
-  </h3>
+  <h3>Livraison & pose</h3>
 
   <p>
     Le mobilier est livré, installé et ajusté sur place pour
@@ -1561,7 +1404,6 @@ footer {
 
 </div>
 
-
 </div>
 
 </section>
@@ -1569,18 +1411,13 @@ footer {
 </div>
 
 
-<!-- ========================================================
-     COULISSES
-     ======================================================== -->
+<!-- COULISSES -->
 
 <section class="section gallery-section">
 
-
 <div class="gallery-heading reveal">
 
-  <h2>
-    Coulisses & autres réalisations
-  </h2>
+  <h2>Coulisses & autres réalisations</h2>
 
   <p>
     Fabrication à l’atelier, détails, matières, gabarits et quelques
@@ -1590,31 +1427,22 @@ footer {
 
 </div>
 
-
 <div class="gallery-grid"
      id="gallery-grid">
 </div>
 
-
 </section>
 
 
-<!-- ========================================================
-     ARCHIVES
-     ======================================================== -->
+<!-- ARCHIVES -->
 
 <section class="section archives-section">
 
-
 <div class="archives-heading reveal">
 
-  <span class="eyebrow">
-    Archives
-  </span>
+  <span class="eyebrow">Archives</span>
 
-  <h2>
-    Quelques projets passés
-  </h2>
+  <h2>Quelques projets passés</h2>
 
   <p>
     D’autres réalisations, aménagements et interventions menés
@@ -1625,7 +1453,6 @@ footer {
 
 
 <div class="archives-grid">
-
 
 <button class="archive-card"
         data-archive="vincennes">
@@ -1638,15 +1465,8 @@ footer {
   </div>
 
   <div class="archive-info">
-
-    <h3>
-      Aménagement de placard
-    </h3>
-
-    <p>
-      Vincennes · Val-de-Marne
-    </p>
-
+    <h3>Aménagement de placard</h3>
+    <p>Vincennes · Val-de-Marne</p>
   </div>
 
 </button>
@@ -1663,40 +1483,26 @@ footer {
   </div>
 
   <div class="archive-info">
-
-    <h3>
-      Restauration de volets
-    </h3>
-
-    <p>
-      Paris 17e
-    </p>
-
+    <h3>Restauration de volets</h3>
+    <p>Paris 17e</p>
   </div>
 
 </button>
-
 
 </div>
 
 </section>
 
 
-<!-- ========================================================
-     CONTACT
-     ======================================================== -->
+<!-- CONTACT -->
 
 <section class="contact">
 
 <div class="contact-inner">
 
-  <span class="eyebrow">
-    Un projet ?
-  </span>
+  <span class="eyebrow">Un projet ?</span>
 
-  <h2>
-    Imaginons-le ensemble.
-  </h2>
+  <h2>Imaginons-le ensemble.</h2>
 
   <p>
     Mobilier sur mesure, agencement intérieur ou projet de plus
@@ -1707,9 +1513,7 @@ footer {
 
   <a class="contact-button"
      href="mailto:txipa.ebenisterie@gmail.com?subject=Projet%20sur%20mesure%20-%20Txipa%20Ébénisterie">
-
     Contacter l'atelier
-
   </a>
 
 </div>
@@ -1720,17 +1524,11 @@ footer {
 </main>
 
 
-<!-- ========================================================
-     FOOTER
-     ======================================================== -->
-
 <footer>
 
 <div>
 
-  <span class="txipa-word">
-    Txipa
-  </span>
+  <span class="txipa-word">Txipa</span>
 
   <span class="txipa-meaning">
     /ˈtʃipa/ · n. m. · euskara<br>
@@ -1739,24 +1537,14 @@ footer {
 
 </div>
 
-
 <p>
-
-  <strong>
-    Txipa Ébénisterie
-  </strong>
-
-  <br>
-
+  <strong>Txipa Ébénisterie</strong><br>
   Meubles & agencements sur mesure
-
 </p>
-
 
 <p>
   Entreprise basée à Romainville · Atelier à Montreuil
 </p>
-
 
 <p>
 
@@ -1769,60 +1557,40 @@ footer {
   <a href="https://www.instagram.com/txipa_ebenisterie/"
      target="_blank"
      rel="noopener noreferrer">
-
     Instagram
-
   </a>
 
 </p>
 
+<p>SIRET : 80944761800020</p>
 
-<p>
-  SIRET : 80944761800020
-</p>
-
-
-<p class="footer-version">
-  V2.9.1
-</p>
-
+<p class="footer-version">V2.10</p>
 
 </footer>
 
 
-<!-- ========================================================
-     POPUP VUE D'ENSEMBLE PROJET
-     ======================================================== -->
+<!-- POPUP PROJET -->
 
 <div class="project-modal"
      id="project-modal">
 
-
 <div class="project-modal-window">
-
 
 <div class="project-modal-header">
 
-
 <div class="project-modal-heading">
 
-  <h2 id="project-modal-title">
-  </h2>
+  <h2 id="project-modal-title"></h2>
 
-  <p id="project-modal-detail">
-  </p>
+  <p id="project-modal-detail"></p>
 
 </div>
-
 
 <button class="project-modal-close"
         id="project-modal-close"
         aria-label="Fermer">
-
   ×
-
 </button>
-
 
 </div>
 
@@ -1835,28 +1603,22 @@ footer {
 
 </div>
 
-
 </div>
 
 </div>
 
 
-<!-- ========================================================
-     PHOTO PROJET AGRANDIE
-     ======================================================== -->
+<!-- PHOTO AGRANDIE -->
 
 <div class="photo-viewer"
      id="photo-viewer">
-
 
 <div class="photo-viewer-header">
 
   <button class="photo-viewer-close"
           id="photo-viewer-close"
           aria-label="Revenir au projet">
-
     ×
-
   </button>
 
 </div>
@@ -1864,63 +1626,46 @@ footer {
 
 <div class="photo-viewer-stage">
 
-
 <button class="photo-nav photo-prev"
         id="photo-prev"
         aria-label="Photo précédente">
-
   ‹
-
 </button>
-
 
 <img id="photo-viewer-image"
      src=""
      alt="">
 
-
 <button class="photo-nav photo-next"
         id="photo-next"
         aria-label="Photo suivante">
-
   ›
-
 </button>
-
 
 </div>
 
 
 <div class="photo-viewer-caption">
 
-  <p id="photo-caption">
-  </p>
+  <p id="photo-caption"></p>
 
-  <p id="photo-detail">
-  </p>
+  <p id="photo-detail"></p>
+
+</div>
 
 </div>
 
 
-</div>
-
-
-<!-- ========================================================
-     LIGHTBOX COULISSES / ARCHIVES
-     ======================================================== -->
+<!-- LIGHTBOX -->
 
 <div class="image-lightbox"
      id="image-lightbox">
 
-
 <button class="image-close"
         id="image-close"
         aria-label="Fermer">
-
   ×
-
 </button>
-
 
 <div class="image-lightbox-visual">
 
@@ -1930,17 +1675,13 @@ footer {
 
 </div>
 
-
 <div class="image-caption">
 
-  <p id="image-caption-title">
-  </p>
+  <p id="image-caption-title"></p>
 
-  <p id="image-caption-detail">
-  </p>
+  <p id="image-caption-detail"></p>
 
 </div>
-
 
 </div>
 
@@ -1948,15 +1689,16 @@ footer {
 <script>
 
 /* ==========================================================
-   PROJETS
+   DONNEES PROJETS
+
+   Les 3 premières images sont réservées à la page principale.
+   Toutes les images suivantes constituent "Découvrir le projet".
    ========================================================== */
 
 const projects = {
 
 
-/* ----------------------------------------------------------
-   LANCIEUX
-   ---------------------------------------------------------- */
+/* LANCIEUX */
 
 bathroom: {
 
@@ -1968,141 +1710,117 @@ bathroom: {
 
   images: [
 
-
     {
       src:"images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_1.jpg",
       caption:"Meuble vasque en frêne massif"
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_2.jpg",
       caption:"Meuble suspendu en frêne massif"
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/ACCUEIL_Meuble vasque en frêne massif_3.jpg",
       caption:"Ensemble de salle de bain en frêne massif"
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260616_152013.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260625_135622.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260626_160449.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260626_161911.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260703_163214.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260703_163316.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260910_125347.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260911_150006.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260911_150013.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260911_151103.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260916_125740.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260923_115712.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260923_115721.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260923_142458.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260925_185506.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260926_124747.jpg",
       caption:""
     },
-
 
     {
       src:"images/01_Salle de bain_Lancieux/20260926_165205.jpg",
       caption:""
     },
 
-
     {
       src:"images/01_Salle de bain_Lancieux/20260927_104219.jpg",
       caption:""
     }
-
 
   ]
 
 },
 
 
-/* ----------------------------------------------------------
-   CLAMART
-   ---------------------------------------------------------- */
+/* CLAMART */
 
 office: {
 
@@ -2114,18 +1832,15 @@ office: {
 
   images: [
 
-
     {
       src:"images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_1.jpg",
       caption:"Vue générale de l'agencement"
     },
 
-
     {
       src:"images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_2.jpg",
       caption:"Bureaux et rangements sur mesure"
     },
-
 
     {
       src:"images/02_Bureaux_Clamart/ACCUEIL_Aménagement_Clamart_3.jpg",
@@ -2133,26 +1848,115 @@ office: {
     },
 
 
+    /* RESULTAT INSTALLE */
+
     {
-      src:"images/02_Bureaux_Clamart/Ensemble pièce.jpg",
-      caption:"Ensemble de la pièce aménagée"
+      src:"images/02_Bureaux_Clamart/20260410_131419.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260410_132038.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260410_131814.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260410_131707.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260410_131722.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260410_131745.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260410_131754.jpg",
+      caption:""
     },
 
 
-    {
-      src:"images/02_Bureaux_Clamart/Meuble tiroirs et plateau imprimante.jpg",
-      caption:"Meuble à tiroirs et plateau pour imprimante"
-    }
+    /* CONCEPTION */
 
+    {
+      src:"images/02_Bureaux_Clamart/Proposition_2_2.png",
+      caption:"Conception du projet en 3D"
+    },
+
+
+    /* FABRICATION */
+
+    {
+      src:"images/02_Bureaux_Clamart/20260320_155553.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260324_101044.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260325_152243.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260326_142525.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260331_133302.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260331_133855.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260401_144400.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260402_100729.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260405_144644.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260405_144656.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/02_Bureaux_Clamart/20260407_093336.jpg",
+      caption:""
+    }
 
   ]
 
 },
 
 
-/* ----------------------------------------------------------
-   LES LILAS
-   ---------------------------------------------------------- */
+/* LES LILAS */
 
 doors: {
 
@@ -2164,92 +1968,127 @@ doors: {
 
   images: [
 
-
     {
       src:"images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_1.jpg",
-      caption:"Portes de placard coulissantes en canage"
-    },
-
-
-    {
-      src:"images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_2.jpg",
-      caption:"Portes coulissantes en MDF peint et canage"
-    },
-
-
-    {
-      src:"images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_3.jpg",
       caption:"Ensemble installé aux Lilas"
     },
 
+    {
+      src:"images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_2.jpg",
+      caption:"Portes coulissantes en MDF peint et canage naturel"
+    },
 
     {
-      src:"images/03_Portes cannage_Les Lilas/Première vue.png",
-      caption:"Première vue du projet"
+      src:"images/03_Portes cannage_Les Lilas/ACCUEIL_Portes cannage_3.jpg",
+      caption:"Placard ouvert et aménagement intérieur"
     },
 
 
-    {
-      src:"images/03_Portes cannage_Les Lilas/Usinage en cour.png",
-      caption:"Usinage en cours à l'atelier"
-    }
+    /* GALERIE */
 
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260420_165946.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260420_170001.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260420_170014.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260302_182334.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260305_110244.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260305_122539.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260305_170503.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260306_174307.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260309_142524.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260420_104906.jpg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/IMG-20260415-WA0000.jpeg",
+      caption:""
+    },
+
+    {
+      src:"images/03_Portes cannage_Les Lilas/20260420_184716.jpg",
+      caption:""
+    }
 
   ]
 
 }
 
-
 };
 
 
 /* ==========================================================
-   ELEMENTS PROJET
+   ELEMENTS
    ========================================================== */
 
 const projectModal =
 document.getElementById("project-modal");
 
-
 const projectModalTitle =
 document.getElementById("project-modal-title");
-
 
 const projectModalDetail =
 document.getElementById("project-modal-detail");
 
-
 const projectOverview =
 document.getElementById("project-overview");
-
 
 const projectModalClose =
 document.getElementById("project-modal-close");
 
-
 const photoViewer =
 document.getElementById("photo-viewer");
-
 
 const photoViewerImage =
 document.getElementById("photo-viewer-image");
 
-
 const photoCaption =
 document.getElementById("photo-caption");
-
 
 const photoDetail =
 document.getElementById("photo-detail");
 
-
 const photoViewerClose =
 document.getElementById("photo-viewer-close");
 
-
 const photoPrev =
 document.getElementById("photo-prev");
-
 
 const photoNext =
 document.getElementById("photo-next");
@@ -2259,148 +2098,154 @@ let currentProject = null;
 
 let currentPhotoIndex = 0;
 
+/*
+  galleryOnly = true :
+  navigation uniquement dans les photos après les 3 ACCUEIL.
+
+  galleryOnly = false :
+  navigation uniquement dans les 3 photos ACCUEIL.
+*/
+
+let galleryOnly = false;
+
 
 /* ==========================================================
-   OUVRIR VUE D'ENSEMBLE PROJET
+   OUVRIR GALERIE PROJET
    ========================================================== */
 
 function openProjectOverview(projectKey) {
 
+  currentProject = projectKey;
 
-  currentProject =
-  projectKey;
-
-
-  const project =
-  projects[projectKey];
-
+  const project = projects[projectKey];
 
   projectModalTitle.textContent =
   project.title;
 
-
   projectModalDetail.textContent =
   project.detail;
 
+  projectOverview.innerHTML = "";
 
-  projectOverview.innerHTML =
-  "";
+  const galleryImages =
+  project.images.slice(3);
 
-
-  project.images.slice(3).forEach((image,index) => {
-
+  galleryImages.forEach((image,index) => {
 
     const button =
     document.createElement("button");
 
-
-    button.type =
-    "button";
-
+    button.type = "button";
 
     button.className =
     "project-overview-item";
 
-
     const img =
     document.createElement("img");
 
-
-    img.src =
-    image.src;
-
+    img.src = image.src;
 
     img.alt =
     image.caption || project.title;
 
-
-    img.loading =
-    "lazy";
-
+    img.loading = "lazy";
 
     button.appendChild(img);
 
+    button.addEventListener(
+      "click",
+      () => {
 
-    button.addEventListener("click",() => {
+        openGalleryPhoto(
+          projectKey,
+          index
+        );
 
-
-      openPhotoViewer(
-      projectKey,
-      index + 3
+      }
     );
 
-
-    });
-
-
-    projectOverview.appendChild(
-      button
-    );
-
+    projectOverview.appendChild(button);
 
   });
 
+  projectModal.classList.add("visible");
 
-  projectModal.classList.add(
-    "visible"
-  );
-
-
-  document.body.classList.add(
-    "no-scroll"
-  );
-
+  document.body.classList.add("no-scroll");
 
 }
 
 
 /* ==========================================================
-   FERMER VUE D'ENSEMBLE
+   FERMER GALERIE
    ========================================================== */
 
 function closeProjectOverview() {
 
+  projectModal.classList.remove("visible");
 
-  projectModal.classList.remove(
-    "visible"
-  );
-
-
-  document.body.classList.remove(
-    "no-scroll"
-  );
-
+  document.body.classList.remove("no-scroll");
 
 }
 
 
 /* ==========================================================
-   OUVRIR PHOTO
+   PHOTO DEPUIS LA GALERIE
    ========================================================== */
 
-function openPhotoViewer(projectKey,index) {
+function openGalleryPhoto(projectKey,index) {
 
+  currentProject = projectKey;
 
-  currentProject =
-  projectKey;
+  currentPhotoIndex = index;
 
-
-  currentPhotoIndex =
-  index;
-
+  galleryOnly = true;
 
   updatePhotoViewer();
 
+  photoViewer.classList.add("visible");
 
-  photoViewer.classList.add(
-    "visible"
-  );
+  document.body.classList.add("no-scroll");
+
+}
 
 
-  document.body.classList.add(
-    "no-scroll"
-  );
+/* ==========================================================
+   PHOTO DEPUIS LA PAGE PRINCIPALE
+   ========================================================== */
 
+function openHomepagePhoto(projectKey,index) {
+
+  currentProject = projectKey;
+
+  currentPhotoIndex = index;
+
+  galleryOnly = false;
+
+  updatePhotoViewer();
+
+  photoViewer.classList.add("visible");
+
+  document.body.classList.add("no-scroll");
+
+}
+
+
+/* ==========================================================
+   LISTE DE NAVIGATION ACTIVE
+   ========================================================== */
+
+function getCurrentImageList() {
+
+  const project =
+  projects[currentProject];
+
+  if(galleryOnly) {
+
+    return project.images.slice(3);
+
+  }
+
+  return project.images.slice(0,3);
 
 }
 
@@ -2411,66 +2256,52 @@ function openPhotoViewer(projectKey,index) {
 
 function updatePhotoViewer() {
 
-
   const project =
   projects[currentProject];
 
+  const images =
+  getCurrentImageList();
 
   const image =
-  project.images[currentPhotoIndex];
-
+  images[currentPhotoIndex];
 
   photoViewerImage.src =
   image.src;
 
-
   photoViewerImage.alt =
   image.caption || project.title;
-
 
   photoCaption.textContent =
   image.caption || "";
 
-
   photoDetail.textContent =
   project.detail;
-
 
 }
 
 
 /* ==========================================================
-   PHOTO SUIVANTE
+   NAVIGATION
    ========================================================== */
 
 function nextPhoto() {
 
-
   const images =
-  projects[currentProject].images;
-
+  getCurrentImageList();
 
   currentPhotoIndex =
   (currentPhotoIndex + 1)
   % images.length;
 
-
   updatePhotoViewer();
-
 
 }
 
 
-/* ==========================================================
-   PHOTO PRECEDENTE
-   ========================================================== */
-
 function previousPhoto() {
 
-
   const images =
-  projects[currentProject].images;
-
+  getCurrentImageList();
 
   currentPhotoIndex =
   (
@@ -2480,9 +2311,7 @@ function previousPhoto() {
   )
   % images.length;
 
-
   updatePhotoViewer();
-
 
 }
 
@@ -2493,69 +2322,63 @@ function previousPhoto() {
 
 function closePhotoViewer() {
 
+  photoViewer.classList.remove("visible");
 
-  photoViewer.classList.remove(
-    "visible"
-  );
+  /*
+    Si la photo provenait directement de l'accueil,
+    aucune galerie n'est ouverte derrière.
+  */
 
+  if(!projectModal.classList.contains("visible")) {
+
+    document.body.classList.remove("no-scroll");
+
+  }
 
 }
 
 
 /* ==========================================================
-   BOUTONS DECOUVRIR
+   BOUTONS PROJET
    ========================================================== */
 
 document
 .querySelectorAll("[data-open-project]")
 .forEach(button => {
 
-
   button.addEventListener(
     "click",
     () => {
-
 
       openProjectOverview(
         button.dataset.openProject
       );
 
-
     }
   );
-
 
 });
 
 
 /* ==========================================================
-   PHOTOS PAGE PRINCIPALE
+   3 PHOTOS ACCUEIL
    ========================================================== */
 
 document
 .querySelectorAll("[data-photo-project]")
 .forEach(button => {
 
-
   button.addEventListener(
     "click",
     () => {
 
-
-      openPhotoViewer(
-
+      openHomepagePhoto(
         button.dataset.photoProject,
-
-        Number(
-          button.dataset.photoIndex
-        )
-
+        Number(button.dataset.photoIndex)
       );
-
 
     }
   );
-
 
 });
 
@@ -2565,18 +2388,15 @@ projectModalClose.addEventListener(
   closeProjectOverview
 );
 
-
 photoViewerClose.addEventListener(
   "click",
   closePhotoViewer
 );
 
-
 photoNext.addEventListener(
   "click",
   nextPhoto
 );
-
 
 photoPrev.addEventListener(
   "click",
@@ -2590,15 +2410,12 @@ photoPrev.addEventListener(
 
 let touchStartX = 0;
 
-
 photoViewer.addEventListener(
   "touchstart",
   event => {
 
-
     touchStartX =
     event.changedTouches[0].screenX;
-
 
   },
   {
@@ -2611,25 +2428,17 @@ photoViewer.addEventListener(
   "touchend",
   event => {
 
-
     const endX =
     event.changedTouches[0].screenX;
-
 
     const difference =
     touchStartX - endX;
 
-
-    if(
-      Math.abs(difference) < 50
-    ) {
+    if(Math.abs(difference) < 50) {
       return;
     }
 
-
-    if(
-      difference > 0
-    ) {
+    if(difference > 0) {
 
       nextPhoto();
 
@@ -2640,7 +2449,6 @@ photoViewer.addEventListener(
       previousPhoto();
 
     }
-
 
   },
   {
@@ -2655,141 +2463,96 @@ photoViewer.addEventListener(
 
 const galleryImages = [
 
-
 ["A la scie à format.png",
  "À la scie à format"],
-
 
 ["Biblitothèque sur mesure.png",
  "Bibliothèque sur mesure"],
 
-
 ["Chêne centenaire.png",
  "Chêne centenaire"],
-
 
 ["Dessin d'épure.png",
  "Dessin d'épure"],
 
-
 ["Dessou de table en carreau de faience et chêne.png",
  "Dessous de table en carreau de faïence et chêne"],
-
 
 ["Echiquier en frenes et placage.jpg",
  "Échiquier en frêne et placage"],
 
-
 ["Espace à l'atelier en construction.png",
  "Espace à l'atelier en construction"],
-
 
 ["Guréidon type Chapo en hêtre et inser en chêne.png",
  "Guéridon type Chapo en hêtre et insert en chêne"],
 
-
 ["Guréidon type Chapo en hêtre et inser piste de dés.png",
  "Guéridon type Chapo en hêtre avec insert piste de dés"],
-
 
 ["Habillage armoire IKEA fermé.png",
  "Habillage d'armoire IKEA fermé"],
 
-
 ["Habillage armoire IKEA ouvert.png",
  "Habillage d'armoire IKEA ouvert"],
-
 
 ["Logo TXIPA.png",
  "Txipa Ébénisterie"],
 
-
 ["Petit secrétaire en panneaux et placage fermé.png",
  "Petit secrétaire en panneaux et placage"],
-
 
 ["Petit secrétaire en panneaux et placage ouvert.png",
  "Petit secrétaire ouvert"],
 
-
 ["Piste de dés en chene et feutrine.jpg",
  "Piste de dés en chêne et feutrine"],
-
 
 ["Planche à découper en bois de bou.png",
  "Planche à découper en bois de bout"],
 
-
 ["Planche à découper en hêtre.jpeg",
  "Planche à découper en hêtre"],
-
 
 ["Préparation gabarit inser charnière.png",
  "Préparation d'un gabarit pour insert de charnière"],
 
-
 ["Rabot de paume.png",
  "Rabot de paume"],
-
 
 ["Rangement vinyle en hêtre.jpg",
  "Rangement vinyle en hêtre"],
 
-
 ["Restauration de chaise.png",
  "Restauration de chaise"],
-
 
 ["Restauration de table de nuit.png",
  "Restauration de table de nuit"],
 
-
 ["Tabouret en CP peuplier et stratifié.png",
  "Tabouret en contreplaqué peuplier et stratifié"]
-
 
 ];
 
 
 const galleryGrid =
-document.getElementById(
-  "gallery-grid"
-);
-
+document.getElementById("gallery-grid");
 
 const imageLightbox =
-document.getElementById(
-  "image-lightbox"
-);
-
+document.getElementById("image-lightbox");
 
 const imageLightboxImg =
-document.getElementById(
-  "image-lightbox-img"
-);
-
+document.getElementById("image-lightbox-img");
 
 const imageCaptionTitle =
-document.getElementById(
-  "image-caption-title"
-);
-
+document.getElementById("image-caption-title");
 
 const imageCaptionDetail =
-document.getElementById(
-  "image-caption-detail"
-);
-
+document.getElementById("image-caption-detail");
 
 const imageClose =
-document.getElementById(
-  "image-close"
-);
+document.getElementById("image-close");
 
-
-/* ==========================================================
-   OUVRIR IMAGE SIMPLE
-   ========================================================== */
 
 function openImage(
   src,
@@ -2797,116 +2560,79 @@ function openImage(
   detail="Txipa Ébénisterie"
 ) {
 
-
   imageLightboxImg.src =
   src;
-
 
   imageLightboxImg.alt =
   title;
 
-
   imageCaptionTitle.textContent =
   title;
 
-
   imageCaptionDetail.textContent =
   detail;
-
 
   imageLightbox.classList.add(
     "visible"
   );
 
-
   document.body.classList.add(
     "no-scroll"
   );
 
-
 }
 
 
-/* ==========================================================
-   FERMER IMAGE SIMPLE
-   ========================================================== */
-
 function closeImage() {
-
 
   imageLightbox.classList.remove(
     "visible"
   );
 
-
   document.body.classList.remove(
     "no-scroll"
   );
 
-
 }
 
 
-/* ==========================================================
-   CREATION COULISSES
-   ========================================================== */
+/* CREATION COULISSES */
 
 galleryImages.forEach(item => {
 
-
   const button =
-  document.createElement(
-    "button"
-  );
-
+  document.createElement("button");
 
   button.className =
   "gallery-item";
 
-
   const img =
-  document.createElement(
-    "img"
-  );
-
+  document.createElement("img");
 
   img.src =
-  "images/Coulisses/"
-  + item[0];
-
+  "images/Coulisses/" + item[0];
 
   img.alt =
   item[1];
 
-
   img.loading =
   "lazy";
 
-
-  button.appendChild(
-    img
-  );
-
+  button.appendChild(img);
 
   button.addEventListener(
     "click",
     () => {
-
 
       openImage(
         img.src,
         item[1]
       );
 
-
     }
   );
 
-
-  galleryGrid.appendChild(
-    button
-  );
-
+  galleryGrid.appendChild(button);
 
 });
 
@@ -2923,7 +2649,6 @@ imageClose.addEventListener(
 
 const archives = {
 
-
 vincennes: {
 
   src:
@@ -2936,7 +2661,6 @@ vincennes: {
   "Vincennes · Val-de-Marne"
 
 },
-
 
 volets: {
 
@@ -2951,7 +2675,6 @@ volets: {
 
 }
 
-
 };
 
 
@@ -2959,32 +2682,21 @@ document
 .querySelectorAll("[data-archive]")
 .forEach(card => {
 
-
   card.addEventListener(
     "click",
     () => {
 
-
       const archive =
-      archives[
-        card.dataset.archive
-      ];
-
+      archives[card.dataset.archive];
 
       openImage(
-
         archive.src,
-
         archive.title,
-
         archive.detail
-
       );
-
 
     }
   );
-
 
 });
 
@@ -2997,43 +2709,25 @@ document.addEventListener(
   "keydown",
   event => {
 
-
     if(
       photoViewer.classList.contains(
         "visible"
       )
     ) {
 
-
-      if(
-        event.key === "Escape"
-      ) {
-
+      if(event.key === "Escape") {
         closePhotoViewer();
-
       }
 
-
-      if(
-        event.key === "ArrowRight"
-      ) {
-
+      if(event.key === "ArrowRight") {
         nextPhoto();
-
       }
 
-
-      if(
-        event.key === "ArrowLeft"
-      ) {
-
+      if(event.key === "ArrowLeft") {
         previousPhoto();
-
       }
-
 
       return;
-
 
     }
 
@@ -3044,18 +2738,11 @@ document.addEventListener(
       )
     ) {
 
-
-      if(
-        event.key === "Escape"
-      ) {
-
+      if(event.key === "Escape") {
         closeProjectOverview();
-
       }
 
-
       return;
-
 
     }
 
@@ -3066,18 +2753,11 @@ document.addEventListener(
       )
     ) {
 
-
-      if(
-        event.key === "Escape"
-      ) {
-
+      if(event.key === "Escape") {
         closeImage();
-
       }
 
-
     }
-
 
   }
 );
@@ -3091,15 +2771,11 @@ projectModal.addEventListener(
   "click",
   event => {
 
-
-    if(
-      event.target === projectModal
-    ) {
+    if(event.target === projectModal) {
 
       closeProjectOverview();
 
     }
-
 
   }
 );
@@ -3113,32 +2789,23 @@ const observer =
 new IntersectionObserver(
   entries => {
 
-
     entries.forEach(
       entry => {
 
-
-        if(
-          entry.isIntersecting
-        ) {
-
+        if(entry.isIntersecting) {
 
           entry.target.classList.add(
             "visible"
           );
 
-
           observer.unobserve(
             entry.target
           );
 
-
         }
-
 
       }
     );
-
 
   },
   {
@@ -3151,14 +2818,9 @@ document
 .querySelectorAll(".reveal")
 .forEach(element => {
 
-
-  observer.observe(
-    element
-  );
-
+  observer.observe(element);
 
 });
-
 
 </script>
 
